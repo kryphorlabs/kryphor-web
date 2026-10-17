@@ -38,6 +38,7 @@ export const metadata: Metadata = {
     "trámites de salud",
     "desarrollo de software",
     "KryphorConnect",
+    "Armenia",
     "Circasia",
     "Quindío",
     "Eje Cafetero",
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
 
 const direccion = {
   "@type": "PostalAddress",
-  addressLocality: "Circasia",
+  addressLocality: "Armenia",
   addressRegion: "Quindío",
   addressCountry: "CO",
 };
@@ -91,7 +92,7 @@ const organizacion = {
       name: "Kryphor Gestiones",
       url: `${SITIO}/gestiones`,
       description: "Afiliaciones a ARL, EPS, caja de compensación y trámites de salud en 24 horas.",
-      address: direccion,
+      address: { ...direccion, addressLocality: "Circasia" },
     },
   ],
 };

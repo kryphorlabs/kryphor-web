@@ -7,7 +7,7 @@ const copy = {
   es: {
     eyebrow: "Un solo grupo",
     titulo: "Cerca de la gente, serios con cada proceso.",
-    sub: "Desde Circasia atendemos empresas, independientes y familias del Eje Cafetero con el mismo cuidado, sea un trámite de afiliación o una plataforma de software.",
+    sub: "Desde Armenia y Circasia atendemos empresas, independientes y familias del Eje Cafetero con el mismo cuidado, sea un trámite de afiliación o una plataforma de software.",
     items: [
       { titulo: "Somos de aquí", texto: "Equipo del Quindío que conoce la región, sus empresas y sus trámites." },
       { titulo: "Respuesta rápida", texto: "Tiempos claros desde el primer contacto, sin filas ni vueltas innecesarias." },
@@ -17,7 +17,7 @@ const copy = {
   en: {
     eyebrow: "One group",
     titulo: "Close to people, serious about every process.",
-    sub: "From Circasia we serve businesses, freelancers and families in the Coffee Region with the same care, whether it's an enrollment or a software platform.",
+    sub: "From Armenia and Circasia we serve businesses, freelancers and families in the Coffee Region with the same care, whether it's an enrollment or a software platform.",
     items: [
       { titulo: "We are local", texto: "A team from Quindío that knows the region, its businesses and its paperwork." },
       { titulo: "Fast response", texto: "Clear timelines from the first contact, no lines and no unnecessary back-and-forth." },

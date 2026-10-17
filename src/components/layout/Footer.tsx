@@ -55,7 +55,7 @@ export default function Footer() {
           </a>
           <p className="inline-flex items-center gap-2 text-sm font-inter" style={{ color: "var(--fg-muted)" }}>
             <MapPin size={14} />
-            Circasia, Quindío — Colombia
+            Armenia, Quindío — Colombia
           </p>
           <div className="flex items-center gap-6">
             {legal[lang].map(l => (

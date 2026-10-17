@@ -5,13 +5,13 @@ import { useApp } from "@/lib/providers";
 
 const copy = {
   es: {
-    badge: "Grupo empresarial · Circasia, Quindío",
+    badge: "Grupo empresarial · Armenia, Quindío",
     marca: "Kryphor",
     titulo: "Grupo de Soluciones Integrales.",
     sub: "Tecnología, Gestión y Medios para el Eje Cafetero.",
   },
   en: {
-    badge: "Business group · Circasia, Quindío",
+    badge: "Business group · Armenia, Quindío",
     marca: "Kryphor",
     titulo: "Integrated Solutions Group.",
     sub: "Technology, Management and Media for Colombia's Coffee Region.",
