@@ -11,7 +11,7 @@ const techStack = [
 const copy = {
   es: {
     title: "Sobre", highlight: "Nosotros",
-    sub: "Un estudio de software independiente nacido en Colombia.",
+    sub: "El estudio de software del Grupo Kryphor, nacido en el Quindío.",
     story: {
       title: "Nuestra historia",
       p1: "Kryphor Labs nació en 2026 con una visión clara: crear tecnología que realmente importe. Fundada en Colombia, surgió de la necesidad de un ecosistema de software independiente que combinara calidad profesional con accesibilidad real para los usuarios latinoamericanos.",
@@ -24,7 +24,7 @@ const copy = {
   },
   en: {
     title: "About", highlight: "Us",
-    sub: "An independent software studio born in Colombia.",
+    sub: "The software studio of Grupo Kryphor, born in Quindío.",
     story: {
       title: "Our story",
       p1: "Kryphor Labs was born in 2026 with a clear vision: create technology that truly matters. Founded in Colombia, it arose from the need for an independent software ecosystem combining professional quality with real accessibility for Latin American users.",
