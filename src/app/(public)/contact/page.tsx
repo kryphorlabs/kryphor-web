@@ -107,7 +107,7 @@ export default function ContactPage() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <p className="font-poppins font-semibold text-sm tracking-widest uppercase mb-4"
+          <p className="font-poppins font-semibold text-base tracking-widest uppercase mb-4"
             style={{ color: "var(--accent)" }}>
             {c.eyebrow}
           </p>

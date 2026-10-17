@@ -38,7 +38,7 @@ export default function ContactSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.75 }}
         >
-          <p className="font-poppins font-semibold text-sm tracking-widest uppercase mb-6"
+          <p className="font-poppins font-semibold text-base tracking-widest uppercase mb-6"
             style={{ color: "var(--accent)" }}>
             {c.eyebrow}
           </p>

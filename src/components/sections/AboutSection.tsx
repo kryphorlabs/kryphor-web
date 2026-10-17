@@ -46,7 +46,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <p className="font-poppins font-semibold text-sm tracking-widest uppercase mb-7"
+            <p className="font-poppins font-semibold text-base tracking-widest uppercase mb-7"
               style={{ color: "var(--accent)" }}>
               {c.eyebrow}
             </p>

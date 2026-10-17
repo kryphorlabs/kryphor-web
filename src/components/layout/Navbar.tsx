@@ -51,7 +51,7 @@ export default function Navbar() {
             <img
               src="/logos/kryphor_logo_light.png"
               alt="Kryphor Labs"
-              className="h-9 w-auto object-contain transition-opacity group-hover:opacity-80"
+              className="h-16 w-auto object-contain transition-opacity group-hover:opacity-80"
             />
           </a>
 

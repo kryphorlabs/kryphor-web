@@ -36,7 +36,7 @@ export default function Footer() {
             <img
               src={theme === "light" ? "/logos/kryphor_logo_light.png" : "/logos/kryphor_logo_transparent.png"}
               alt="Kryphor Labs"
-              className="h-10 w-auto object-contain"
+              className="h-14 w-auto object-contain"
             />
           </a>
           <p className="font-inter text-base max-w-sm"

@@ -42,7 +42,7 @@ export default function EcosystemSection() {
           transition={{ duration: 0.65 }}
           className="max-w-2xl mb-16"
         >
-          <p className="font-poppins font-semibold text-sm tracking-widest uppercase mb-5"
+          <p className="font-poppins font-semibold text-base tracking-widest uppercase mb-5"
             style={{ color: "var(--accent)" }}>
             {c.eyebrow}
           </p>
