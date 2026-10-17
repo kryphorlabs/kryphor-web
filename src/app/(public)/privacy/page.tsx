@@ -1,122 +1,154 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidad — Kryphor Labs",
+  title: "Política de Tratamiento de Datos Personales",
+  description:
+    "Política de tratamiento de datos personales del Grupo Kryphor (Kryphor Labs y Kryphor Gestiones), conforme a la Ley 1581 de 2012.",
+  alternates: { canonical: "/privacy" },
 };
+
+const RESPONSABLE = {
+  nombre: "Cristopher Bueno",
+  ciudad: "Armenia, Quindío, Colombia",
+  correo: "kryphorlabs@gmail.com",
+  whatsapp: "+57 314 569 0358",
+};
+
+function Seccion({ titulo, children }: { titulo: string; children: React.ReactNode }) {
+  return (
+    <section>
+      <h2 className="font-inter font-semibold text-xl mb-3" style={{ color: "var(--fg)" }}>
+        {titulo}
+      </h2>
+      {children}
+    </section>
+  );
+}
+
+function Correo() {
+  return (
+    <a href={`mailto:${RESPONSABLE.correo}`} style={{ color: "var(--labs)" }}>
+      {RESPONSABLE.correo}
+    </a>
+  );
+}
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen pt-24 pb-16" style={{ background: "var(--bg)" }}>
+    <div className="min-h-screen pt-32 pb-20" style={{ background: "var(--bg)" }}>
       <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-14">
         <div className="mb-10">
-          <h1 className="font-poppins font-bold text-4xl mb-3" style={{ color: "var(--fg)" }}>
-            Política de Privacidad
+          <h1 className="font-inter font-semibold tracking-[-0.03em] text-4xl mb-3" style={{ color: "var(--gestiones)" }}>
+            Política de Tratamiento de Datos Personales
           </h1>
           <p className="font-inter text-sm" style={{ color: "var(--fg-muted)" }}>
-            Última actualización: 20 de mayo de 2026
-          </p>
-          <p className="font-inter text-sm" style={{ color: "var(--fg-muted)" }}>
-            kryphorlabs.com
+            Última actualización: 17 de octubre de 2026 · kryphorlabs.com
           </p>
         </div>
 
-        <div className="glass rounded-3xl p-8 sm:p-10 space-y-8 font-inter leading-relaxed"
-          style={{ color: "var(--fg-muted)" }}>
+        <div className="rounded-3xl p-8 sm:p-10 space-y-8 font-inter leading-relaxed"
+          style={{ color: "var(--fg-muted)", background: "var(--bg-2)", border: "1px solid var(--border)" }}>
 
-          <section>
-            <h2 className="font-poppins font-bold text-xl mb-3" style={{ color: "var(--fg)" }}>
-              1. Introducción
-            </h2>
-            <p>
-              Kryphor Labs respeta tu privacidad y se compromete a proteger tus datos personales.
-              Esta política describe cómo recopilamos, usamos y protegemos la información cuando
-              usas nuestras aplicaciones y servicios.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-poppins font-bold text-xl mb-3" style={{ color: "var(--fg)" }}>
-              2. Datos que recopilamos
-            </h2>
+          <Seccion titulo="1. Responsable del tratamiento">
             <p className="mb-3">
-              La mayoría de nuestras aplicaciones funcionan sin necesidad de cuenta. Los datos que podemos
-              recopilar incluyen:
+              El responsable del tratamiento de los datos personales recogidos a través de este sitio y de los
+              servicios del Grupo Kryphor (Kryphor Labs y Kryphor Gestiones) es:
             </p>
-            <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>Datos de uso anónimos para mejorar la experiencia</li>
-              <li>Identificador de dispositivo anónimo para funcionamiento de publicidad</li>
-              <li>Email y nombre si decides crear una cuenta, solo en apps que lo requieran</li>
+            <ul className="space-y-1 ml-1">
+              <li><strong style={{ color: "var(--fg)" }}>Nombre:</strong> {RESPONSABLE.nombre}</li>
+              <li><strong style={{ color: "var(--fg)" }}>Domicilio:</strong> {RESPONSABLE.ciudad}</li>
+              <li><strong style={{ color: "var(--fg)" }}>Correo:</strong> <Correo /></li>
+              <li><strong style={{ color: "var(--fg)" }}>WhatsApp:</strong> {RESPONSABLE.whatsapp}</li>
             </ul>
-          </section>
-
-          <section>
-            <h2 className="font-poppins font-bold text-xl mb-3" style={{ color: "var(--fg)" }}>
-              3. Publicidad
-            </h2>
-            <p>
-              Algunas aplicaciones utilizan Google AdMob para mostrar publicidad. AdMob puede
-              recopilar datos según la política de privacidad de Google. Puedes optar por no recibir
-              anuncios personalizados en la configuración de tu dispositivo.
+            <p className="mt-3">
+              Esta política se expide conforme a la Ley 1581 de 2012 y sus decretos reglamentarios.
             </p>
-          </section>
+          </Seccion>
 
-          <section>
-            <h2 className="font-poppins font-bold text-xl mb-3" style={{ color: "var(--fg)" }}>
-              4. Uso de los datos
-            </h2>
-            <p className="mb-3">Utilizamos los datos únicamente para:</p>
+          <Seccion titulo="2. Datos que recogemos">
             <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>Mejorar la funcionalidad y experiencia de nuestras apps</li>
-              <li>Enviar comunicaciones si expresamente nos autorizaste</li>
-              <li>Cumplir con obligaciones legales</li>
+              <li>Datos de contacto que nos envías: nombre, correo, teléfono y el contenido de tu mensaje.</li>
+              <li>
+                Para trámites de Kryphor Gestiones: datos de identificación, laborales y de afiliación necesarios
+                para gestionar tu afiliación a ARL, EPS o Caja de Compensación, y los documentos que nos compartas
+                para ese fin.
+              </li>
+              <li>Datos de uso anónimos del sitio, para mejorar su funcionamiento.</li>
+              <li>En nuestras aplicaciones, un identificador anónimo de dispositivo para mostrar publicidad.</li>
             </ul>
-          </section>
+          </Seccion>
 
-          <section>
-            <h2 className="font-poppins font-bold text-xl mb-3" style={{ color: "var(--fg)" }}>
-              5. Derechos sobre tus datos
-            </h2>
+          <Seccion titulo="3. Datos sensibles">
             <p>
-              Tienes derecho de acceso, rectificación, cancelación y oposición sobre tus datos
-              personales. Para ejercer estos derechos, escríbenos a:{" "}
-              <a href="mailto:kryphorlabs@gmail.com" style={{ color: "var(--accent)" }}>
-                kryphorlabs@gmail.com
-              </a>
+              Algunos trámites de salud pueden implicar datos sensibles. Solo los tratamos con tu autorización
+              previa, expresa e informada, y únicamente para el trámite que nos pediste. No estás obligado a
+              entregar datos sensibles; si no los entregas, es posible que no podamos completar ese trámite.
             </p>
-          </section>
+          </Seccion>
 
-          <section>
-            <h2 className="font-poppins font-bold text-xl mb-3" style={{ color: "var(--fg)" }}>
-              6. Menores de edad
-            </h2>
-            <p>
-              Nuestros servicios no están dirigidos a menores de 13 años. No recopilamos
-              conscientemente datos personales de menores. Si eres padre o tutor y crees que tu
-              hijo nos proporcionó información, contáctanos.
+          <Seccion titulo="4. Finalidades">
+            <ul className="list-disc list-inside space-y-2 ml-4">
+              <li>Responder tus consultas y solicitudes.</li>
+              <li>Gestionar las afiliaciones y trámites que nos encargues ante las entidades correspondientes.</li>
+              <li>Informarte del estado de tus trámites y de vencimientos relacionados.</li>
+              <li>Prestar y mejorar nuestros servicios de software.</li>
+              <li>Cumplir obligaciones legales.</li>
+            </ul>
+            <p className="mt-3">
+              No vendemos tus datos. Solo los compartimos con las entidades ante las que gestionamos tu trámite
+              (ARL, EPS, Caja de Compensación) o cuando la ley lo exija.
             </p>
-          </section>
+          </Seccion>
 
-          <section>
-            <h2 className="font-poppins font-bold text-xl mb-3" style={{ color: "var(--fg)" }}>
-              7. Cambios a esta política
-            </h2>
-            <p>
-              Podemos actualizar esta política periódicamente. Te notificaremos sobre cambios
-              significativos. El uso continuado implica aceptación de la política actualizada.
-            </p>
-          </section>
+          <Seccion titulo="5. Tus derechos">
+            <p className="mb-3">Como titular de los datos tienes derecho a:</p>
+            <ul className="list-disc list-inside space-y-2 ml-4">
+              <li>Conocer, actualizar y rectificar tus datos.</li>
+              <li>Pedir prueba de la autorización que nos diste.</li>
+              <li>Saber qué uso le hemos dado a tus datos.</li>
+              <li>Revocar la autorización o pedir que suprimamos tus datos, cuando no exista un deber legal de conservarlos.</li>
+              <li>Presentar quejas ante la Superintendencia de Industria y Comercio.</li>
+              <li>Acceder gratis a tus datos personales.</li>
+            </ul>
+          </Seccion>
 
-          <section>
-            <h2 className="font-poppins font-bold text-xl mb-3" style={{ color: "var(--fg)" }}>
-              8. Contacto
-            </h2>
+          <Seccion titulo="6. Cómo ejercer tus derechos">
             <p>
-              Para cualquier consulta sobre privacidad:{" "}
-              <a href="mailto:kryphorlabs@gmail.com" style={{ color: "var(--accent)" }}>
-                kryphorlabs@gmail.com
-              </a>
+              Escríbenos a <Correo /> indicando tu nombre, documento y lo que solicitas. Respondemos consultas en
+              máximo 10 días hábiles y reclamos en máximo 15 días hábiles, según la Ley 1581 de 2012.
             </p>
-          </section>
+          </Seccion>
+
+          <Seccion titulo="7. Seguridad">
+            <p>
+              Aplicamos medidas técnicas y organizativas razonables para proteger tus datos contra pérdida, uso o
+              acceso no autorizado, incluidas copias de seguridad cifradas y acceso restringido a la información.
+            </p>
+          </Seccion>
+
+          <Seccion titulo="8. Publicidad en aplicaciones">
+            <p>
+              Algunas de nuestras aplicaciones usan Google AdMob. AdMob puede recoger datos según la política de
+              privacidad de Google. Puedes desactivar los anuncios personalizados en la configuración de tu
+              dispositivo.
+            </p>
+          </Seccion>
+
+          <Seccion titulo="9. Menores de edad">
+            <p>
+              Nuestros servicios no están dirigidos a menores de 13 años. Los datos de menores que se requieran
+              para un trámite (por ejemplo, beneficiarios de una EPS) solo se tratan con autorización de su
+              representante legal y respetando sus derechos.
+            </p>
+          </Seccion>
+
+          <Seccion titulo="10. Vigencia y cambios">
+            <p>
+              Esta política rige desde su publicación. Si la cambiamos de forma importante, lo informaremos en este
+              sitio. Los datos se conservan mientras sean necesarios para las finalidades descritas o por el tiempo
+              que exija la ley.
+            </p>
+          </Seccion>
         </div>
       </div>
     </div>

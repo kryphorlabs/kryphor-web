@@ -42,6 +42,7 @@ const copy = {
     finalSub: "Escríbenos ahora y te respondemos con los pasos exactos para tu caso.",
     ubicacion: "Circasia, Quindío — atendemos todo el Eje Cafetero",
     aviso: "Kryphor Gestiones presta el servicio de gestión y acompañamiento de trámites. La aprobación de cada afiliación depende de la entidad correspondiente (ARL, EPS o Caja de Compensación).",
+    datos: "Política de tratamiento de datos",
   },
   en: {
     badge: "Kryphor Gestiones · Circasia, Quindío",
@@ -77,6 +78,7 @@ const copy = {
     finalSub: "Message us now and we'll reply with the exact steps for your case.",
     ubicacion: "Circasia, Quindío — serving the whole Coffee Region",
     aviso: "Kryphor Gestiones provides paperwork management and support. Approval of each enrollment depends on the corresponding entity (ARL, EPS or Compensation Fund).",
+    datos: "Personal data policy",
   },
 };
 
@@ -293,7 +295,10 @@ export default function GestionesLanding() {
           </motion.div>
 
           <p className="font-inter text-sm text-center max-w-3xl mx-auto mt-8" style={{ color: "var(--fg-muted)", lineHeight: 1.7 }}>
-            {c.aviso}
+            {c.aviso}{" "}
+            <a href="/privacy" className="underline underline-offset-2" style={{ color: "var(--gestiones)" }}>
+              {c.datos}
+            </a>
           </p>
         </div>
       </section>
