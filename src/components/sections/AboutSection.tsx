@@ -6,7 +6,7 @@ const copy = {
   es: {
     eyebrow: "Kryphor Labs",
     title: "Software construido con propósito.",
-    story: "Somos un estudio de desarrollo independiente fundado en Colombia en 2026. Nuestra idea es simple: crear tecnología que la gente realmente use y disfrute.",
+    story: "Somos el estudio de desarrollo de software y soluciones digitales del Grupo Kryphor, fundado en el Quindío en 2026. Nuestra idea es simple: crear tecnología que la gente realmente use.",
     misionTitle: "Misión",
     mision: "Crear software de calidad que mejore la vida de las personas. Cada producto que lanzamos existe porque resuelve algo real.",
     visionTitle: "Visión",
@@ -15,7 +15,7 @@ const copy = {
   en: {
     eyebrow: "Kryphor Labs",
     title: "Software built with purpose.",
-    story: "We are an independent development studio founded in Colombia in 2026. Our idea is simple: create technology that people actually use and enjoy.",
+    story: "We are the software development and digital solutions studio of Grupo Kryphor, founded in Quindío in 2026. Our idea is simple: create technology that people actually use.",
     misionTitle: "Mission",
     mision: "Create quality software that improves people's lives. Every product we launch exists because it solves something real.",
     visionTitle: "Vision",

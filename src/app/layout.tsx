@@ -11,22 +11,89 @@ const poppins = Poppins({
 });
 
 const inter = Inter({
-  weight: ["400", "500"],
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-inter",
 });
 
+const SITIO = "https://kryphorlabs.com";
+const TITULO = "Kryphor — Grupo de Soluciones Integrales | Labs y Gestiones";
+const DESCRIPCION =
+  "Kryphor es un grupo empresarial del Quindío. Kryphor Labs desarrolla software como KryphorConnect y Kryphor Gestiones gestiona afiliaciones a ARL, EPS, caja de compensación y trámites de salud.";
+
 export const metadata: Metadata = {
-  title: "Kryphor Labs — Software · Videojuegos",
-  description:
-    "Kryphor Labs es un estudio de desarrollo de software independiente. Creamos videojuegos, aplicaciones y experiencias digitales con propósito y calidad.",
-  keywords: ["Kryphor Labs", "software", "videojuegos", "desarrollo", "estudio independiente"],
+  metadataBase: new URL(SITIO),
+  title: {
+    default: TITULO,
+    template: "%s | Grupo Kryphor",
+  },
+  description: DESCRIPCION,
+  keywords: [
+    "Grupo Kryphor",
+    "Kryphor Labs",
+    "Kryphor Gestiones",
+    "afiliación ARL",
+    "afiliación EPS",
+    "caja de compensación",
+    "trámites de salud",
+    "desarrollo de software",
+    "KryphorConnect",
+    "Circasia",
+    "Quindío",
+    "Eje Cafetero",
+    "videojuegos",
+  ],
   openGraph: {
-    title: "Kryphor Labs",
-    description: "Software independiente construido con propósito.",
+    title: TITULO,
+    description: DESCRIPCION,
+    url: SITIO,
+    siteName: "Grupo Kryphor",
     type: "website",
     locale: "es_CO",
+    images: [{ url: "/logos/kryphor_banner.png", alt: "Grupo Kryphor" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: TITULO,
+    description: DESCRIPCION,
+    images: ["/logos/kryphor_banner.png"],
+  },
+};
+
+const direccion = {
+  "@type": "PostalAddress",
+  addressLocality: "Circasia",
+  addressRegion: "Quindío",
+  addressCountry: "CO",
+};
+
+const organizacion = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Grupo Kryphor",
+  alternateName: "Kryphor",
+  url: SITIO,
+  logo: `${SITIO}/logos/kryphor_logo_light.png`,
+  email: "kryphorlabs@gmail.com",
+  description: DESCRIPCION,
+  address: direccion,
+  areaServed: ["Quindío", "Eje Cafetero", "Colombia"],
+  subOrganization: [
+    {
+      "@type": "Organization",
+      name: "Kryphor Labs",
+      url: `${SITIO}/labs`,
+      description: "Estudio de desarrollo de software y soluciones digitales, creadores de KryphorConnect.",
+      address: direccion,
+    },
+    {
+      "@type": "Organization",
+      name: "Kryphor Gestiones",
+      url: `${SITIO}/gestiones`,
+      description: "Afiliaciones a ARL, EPS, caja de compensación y trámites de salud en 24 horas.",
+      address: direccion,
+    },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -38,6 +105,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{
             __html: `try{var t=localStorage.getItem('kl-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}`,
           }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizacion) }}
         />
       </head>
       <Script

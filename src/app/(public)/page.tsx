@@ -1,14 +1,19 @@
-import HeroSection from "@/components/sections/HeroSection";
-import AboutSection from "@/components/sections/AboutSection";
-import EcosystemSection from "@/components/sections/EcosystemSection";
+import type { Metadata } from "next";
+import GrupoHeroSection from "@/components/sections/GrupoHeroSection";
+import GrupoEmpresasSection from "@/components/sections/GrupoEmpresasSection";
+import GrupoValoresSection from "@/components/sections/GrupoValoresSection";
 import ContactSection from "@/components/sections/ContactSection";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   return (
     <>
-      <HeroSection />
-      <AboutSection />
-      <EcosystemSection />
+      <GrupoHeroSection />
+      <GrupoEmpresasSection />
+      <GrupoValoresSection />
       <ContactSection />
     </>
   );

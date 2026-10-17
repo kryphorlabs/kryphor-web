@@ -7,13 +7,15 @@ import { useApp } from "@/lib/providers";
 const links = {
   es: [
     { label: "Inicio",    href: "/" },
-    { label: "Nosotros",  href: "/about" },
+    { label: "Labs",      href: "/labs" },
+    { label: "Gestiones", href: "/gestiones" },
     { label: "Contacto",  href: "/contact" },
   ],
   en: [
-    { label: "Home",    href: "/" },
-    { label: "About",   href: "/about" },
-    { label: "Contact", href: "/contact" },
+    { label: "Home",      href: "/" },
+    { label: "Labs",      href: "/labs" },
+    { label: "Gestiones", href: "/gestiones" },
+    { label: "Contact",   href: "/contact" },
   ],
 };
 
@@ -50,7 +52,7 @@ export default function Navbar() {
           <a href="/" className="flex-shrink-0 group">
             <img
               src="/logos/kryphor_logo_light.png"
-              alt="Kryphor Labs"
+              alt="Grupo Kryphor"
               className="h-16 w-auto object-contain transition-opacity group-hover:opacity-80"
             />
           </a>

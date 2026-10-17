@@ -6,19 +6,19 @@ import { useApp } from "@/lib/providers";
 
 const copy = {
   es: {
-    badge: "Plataforma Tecnológica · 2026",
-    h1a: "Construyendo herramientas",
-    h1b: "para el futuro.",
-    sub: "Creamos inteligencia artificial, plataformas digitales y soluciones tecnológicas que ayudan a personas y organizaciones a crecer.",
+    badge: "Kryphor Labs · Grupo Kryphor",
+    h1a: "Estudio de desarrollo de software",
+    h1b: "y soluciones digitales.",
+    sub: "Creamos plataformas como KryphorConnect, aplicaciones y soluciones tecnológicas que ayudan a personas y organizaciones a crecer.",
     cta1: "Explorar Ecosistema",
     cta2: "Ver KryphorConnect",
     scrollHint: "Desplázate para explorar",
   },
   en: {
-    badge: "Technology Platform · 2026",
-    h1a: "Building tools",
-    h1b: "for the future.",
-    sub: "We create artificial intelligence, digital platforms and technological solutions that help people and organizations grow.",
+    badge: "Kryphor Labs · Grupo Kryphor",
+    h1a: "Software development studio",
+    h1b: "and digital solutions.",
+    sub: "We build platforms such as KryphorConnect, applications and technological solutions that help people and organizations grow.",
     cta1: "Explore Ecosystem",
     cta2: "See KryphorConnect",
     scrollHint: "Scroll to explore",
@@ -167,7 +167,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
           className="font-poppins font-bold tracking-tight leading-[1.06] mb-8"
-          style={{ fontSize: "clamp(38px, 7vw, 96px)", color: "var(--fg)" }}
+          style={{ fontSize: "clamp(34px, 5.6vw, 76px)", color: "var(--fg)" }}
         >
           {c.h1a}
           <br />
