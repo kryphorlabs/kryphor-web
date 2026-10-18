@@ -19,7 +19,7 @@ export default function Pie() {
             <ul className="space-y-3">
               {SERVICIOS.map(s => (
                 <li key={s.id}>
-                  <a href="/gestiones#servicios" className="font-inter text-[15px] text-slate-400 hover:text-white transition-colors">
+                  <a href="/#servicios" className="font-inter text-[15px] text-slate-400 hover:text-white transition-colors">
                     {s.titulo}
                   </a>
                 </li>
@@ -40,7 +40,7 @@ export default function Pie() {
                 <MapPin size={17} className="text-emerald-400" /> Circasia, Quindío
               </li>
               <li>
-                <a href="/gestiones/privacidad" className="font-inter text-[15px] text-slate-400 hover:text-white transition-colors">
+                <a href="/privacidad" className="font-inter text-[15px] text-slate-400 hover:text-white transition-colors">
                   Política de tratamiento de datos
                 </a>
               </li>

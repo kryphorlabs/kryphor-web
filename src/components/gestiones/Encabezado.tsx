@@ -6,10 +6,10 @@ import { LogoGestiones } from "./Logo";
 import { enlaceWhatsapp } from "@/data/gestiones";
 
 const enlaces = [
-  { label: "Servicios", href: "/gestiones#servicios" },
-  { label: "Cómo funciona", href: "/gestiones#como-funciona" },
-  { label: "Documentos", href: "/gestiones#documentos" },
-  { label: "Preguntas", href: "/gestiones#preguntas" },
+  { label: "Servicios", href: "/#servicios" },
+  { label: "Cómo funciona", href: "/#como-funciona" },
+  { label: "Documentos", href: "/#documentos" },
+  { label: "Preguntas", href: "/#preguntas" },
 ];
 
 /**
@@ -74,7 +74,7 @@ export default function Encabezado() {
         style={{ maxHeight: accesoVisible ? "3.25rem" : 0, background: "#0B1220" }}
         aria-hidden={!accesoVisible}
       >
-        <a href="/gestiones/acceso" tabIndex={accesoVisible ? 0 : -1}
+        <a href="/acceso" tabIndex={accesoVisible ? 0 : -1}
           className="my-2.5 inline-flex items-center gap-2 px-4 py-1.5 rounded-full font-inter text-sm transition-colors"
           style={{ border: "1px solid rgba(255,255,255,0.22)", color: "#CBD5E1" }}>
           <LockKeyhole size={14} /> Acceso del equipo
@@ -89,7 +89,7 @@ export default function Encabezado() {
           borderBottom: `1px solid ${desplazado ? "rgba(15,23,42,0.08)" : "transparent"}`,
         }}>
         <div className="kl-container max-w-7xl flex items-center justify-between py-4">
-          <a href="/gestiones" aria-label="Kryphor Gestiones, inicio"><LogoGestiones /></a>
+          <a href="/" aria-label="Kryphor Gestiones, inicio"><LogoGestiones /></a>
 
           <nav className="hidden lg:flex items-center gap-8">
             {enlaces.map(l => (

@@ -29,7 +29,7 @@ export default function AccesoEquipo() {
           <LockKeyhole size={15} /> Solo personal autorizado
         </span>
         <div className="mt-8">
-          <a href="/gestiones" className="inline-flex items-center gap-2 font-inter font-medium text-emerald-700 hover:text-emerald-800">
+          <a href="/" className="inline-flex items-center gap-2 font-inter font-medium text-emerald-700 hover:text-emerald-800">
             <ArrowLeft size={17} /> Volver al inicio
           </a>
         </div>

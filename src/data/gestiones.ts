@@ -7,7 +7,7 @@ export const WHATSAPP_VISIBLE = "314 569 0358";
 export const GESTIONES_SITIO = "https://gestiones.kryphorlabs.com";
 
 // true cuando cloudflare ya sirva gestiones.kryphorlabs.com: kryphorlabs.com/gestiones redirige alla.
-export const GESTIONES_SUBDOMINIO_ACTIVO = false;
+export const GESTIONES_SUBDOMINIO_ACTIVO = true;
 
 // false mientras no este lista la camara de comercio: la pagina se ve pero google no la indexa.
 export const GESTIONES_PUBLICA = false;
