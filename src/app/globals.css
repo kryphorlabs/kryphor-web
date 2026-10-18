@@ -147,6 +147,25 @@
   mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 75%);
 }
 
+/* ── Grupo: aurora animada del hero ────────────────────────── */
+.aurora {
+  position: absolute; inset: -20% -10% auto -10%; height: 120%; filter: blur(70px); pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, #000 45%, transparent 85%);
+  mask-image: linear-gradient(to bottom, #000 45%, transparent 85%);
+}
+.aurora span { position: absolute; border-radius: 9999px; opacity: 0.55; animation: aurora-flota 18s ease-in-out infinite alternate; }
+.aurora span:nth-child(1) { width: 46vw; height: 46vw; left: 4%;  top: 6%;  background: #A5B4FC; }
+.aurora span:nth-child(2) { width: 38vw; height: 38vw; right: 2%; top: 0;   background: #86EFAC; animation-duration: 22s; animation-delay: -6s; }
+.aurora span:nth-child(3) { width: 34vw; height: 34vw; left: 34%; top: 30%; background: #7DD3FC; animation-duration: 26s; animation-delay: -12s; opacity: 0.4; }
+@keyframes aurora-flota {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(4vw, 3vw, 0) scale(1.08); }
+  100% { transform: translate3d(-3vw, 5vw, 0) scale(0.95); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aurora span { animation: none; }
+}
+
 /* ── Smooth scroll ─────────────────────────────────────────── */
 section { scroll-margin-top: 80px; }
 

@@ -1,73 +1,59 @@
 "use client";
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
-import { useApp } from "@/lib/providers";
 
-const copy = {
-  es: {
-    badge: "Grupo empresarial · Armenia, Quindío",
-    marca: "Kryphor",
-    titulo: "Grupo de Soluciones Integrales.",
-    sub: "Tecnología, Gestión y Medios para el Eje Cafetero.",
-  },
-  en: {
-    badge: "Business group · Armenia, Quindío",
-    marca: "Kryphor",
-    titulo: "Integrated Solutions Group.",
-    sub: "Technology, Management and Media for Colombia's Coffee Region.",
-  },
-};
+const curva = [0.16, 1, 0.3, 1] as const;
 
 export default function GrupoHeroSection() {
-  const { lang } = useApp();
-  const c = copy[lang];
-
   return (
-    <section className="relative overflow-hidden pt-40 pb-16 sm:pt-48 sm:pb-20" style={{ background: "var(--bg)" }}>
-      <div className="grupo-grid absolute inset-0 pointer-events-none" />
-      <div className="absolute inset-x-0 top-0 h-[520px] pointer-events-none"
-        style={{ background: "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(79,70,229,0.08), transparent 70%)" }} />
+    <section className="relative isolate overflow-hidden pt-40 pb-14 sm:pt-48 sm:pb-16">
+      <div className="absolute inset-0 -z-20" style={{ background: "linear-gradient(180deg, #F5F6FF 0%, #FFFFFF 85%)" }} />
+      <div className="aurora -z-10" aria-hidden="true"><span /><span /><span /></div>
+      <div className="grupo-grid absolute inset-0 -z-10" />
 
-      <div className="relative z-10 kl-container flex flex-col items-center text-center">
+      <div className="kl-container flex flex-col items-center text-center">
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-10 text-sm font-inter font-medium"
-          style={{ background: "var(--bg)", border: "1px solid var(--border)", color: "var(--fg-muted)", boxShadow: "0 1px 2px rgba(15,23,42,0.04)" }}
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-9 text-sm font-inter font-medium text-slate-600 bg-white/70 backdrop-blur"
+          style={{ border: "1px solid rgba(15,23,42,0.08)" }}
         >
-          <MapPin size={14} style={{ color: "var(--labs)" }} />
-          {c.badge}
+          <MapPin size={14} className="text-indigo-600" />
+          Grupo empresarial · Armenia, Quindío
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-          className="font-inter font-semibold tracking-[-0.04em] leading-[1.02]"
-          style={{ fontSize: "clamp(44px, 8vw, 104px)", color: "var(--gestiones)" }}
+          transition={{ duration: 0.7, delay: 0.08, ease: curva }}
+          className="font-inter font-semibold tracking-[-0.045em] text-slate-900"
+          style={{ fontSize: "clamp(52px, 9vw, 120px)", lineHeight: 0.95 }}
         >
-          {c.marca}
-          <span className="block mt-2 tracking-[-0.03em]"
-            style={{
-              fontSize: "clamp(26px, 4.2vw, 56px)",
-              background: "linear-gradient(180deg, #0F172A 0%, #475569 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}>
-            {c.titulo}
-          </span>
+          Kryphor
         </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.16, ease: curva }}
+          className="font-inter font-semibold tracking-[-0.03em] mt-4"
+          style={{
+            fontSize: "clamp(26px, 4vw, 52px)", lineHeight: 1.1,
+            background: "linear-gradient(90deg, #4F46E5 0%, #0F172A 50%, #15803D 100%)",
+            WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
+          }}
+        >
+          Grupo de Soluciones Integrales.
+        </motion.p>
 
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="font-inter max-w-xl mt-8"
-          style={{ fontSize: "clamp(17px, 1.8vw, 21px)", color: "var(--fg-muted)", lineHeight: 1.6 }}
+          transition={{ duration: 0.6, delay: 0.26 }}
+          className="font-inter text-slate-600 max-w-xl mt-7"
+          style={{ fontSize: "clamp(17px, 1.7vw, 21px)", lineHeight: 1.6 }}
         >
-          {c.sub}
+          Tecnología, Gestión y Medios para el Eje Cafetero.
         </motion.p>
       </div>
     </section>

@@ -1,21 +1,17 @@
 "use client";
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect } from "react";
 import { usePageView } from "@/lib/usePageView";
 
+// el sitio va solo en español, para otros idiomas esta el traductor del navegador
 export type Theme = "light";
 export type Lang = "es" | "en";
 
 interface AppCtx {
   theme: Theme;
   lang: Lang;
-  toggleLang: () => void;
 }
 
-const AppContext = createContext<AppCtx>({
-  theme: "light",
-  lang: "es",
-  toggleLang: () => {},
-});
+const AppContext = createContext<AppCtx>({ theme: "light", lang: "es" });
 
 function PageViewTracker() {
   usePageView();
@@ -23,25 +19,13 @@ function PageViewTracker() {
 }
 
 export function AppProviders({ children }: { children: React.ReactNode }) {
-  const [lang, setLang] = useState<Lang>("es");
-  const theme: Theme = "light";
-
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", "light");
-    try {
-      const l = localStorage.getItem("kl-lang") as Lang;
-      if (l === "es" || l === "en") setLang(l);
-    } catch {}
+    try { localStorage.removeItem("kl-lang"); } catch {}
   }, []);
 
-  const toggleLang = () => {
-    const next: Lang = lang === "es" ? "en" : "es";
-    setLang(next);
-    try { localStorage.setItem("kl-lang", next); } catch {}
-  };
-
   return (
-    <AppContext.Provider value={{ theme, lang, toggleLang }}>
+    <AppContext.Provider value={{ theme: "light", lang: "es" }}>
       <PageViewTracker />
       {children}
     </AppContext.Provider>

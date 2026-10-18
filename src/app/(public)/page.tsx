@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import GrupoHeroSection from "@/components/sections/GrupoHeroSection";
 import GrupoEmpresasSection from "@/components/sections/GrupoEmpresasSection";
 import GrupoValoresSection from "@/components/sections/GrupoValoresSection";
-import ContactSection from "@/components/sections/ContactSection";
+import GrupoCtaSection from "@/components/sections/GrupoCtaSection";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -14,7 +14,7 @@ export default function HomePage() {
       <GrupoHeroSection />
       <GrupoEmpresasSection />
       <GrupoValoresSection />
-      <ContactSection />
+      <GrupoCtaSection />
     </>
   );
 }

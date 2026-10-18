@@ -1,36 +1,28 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe } from "lucide-react";
-import { useApp } from "@/lib/providers";
+import { Menu, X, ArrowUpRight } from "lucide-react";
+import { GESTIONES_URL } from "@/data/gestiones";
 
-const links = {
-  es: [
-    { label: "Inicio",    href: "/" },
-    { label: "Labs",      href: "/labs" },
-    { label: "Gestiones", href: "/gestiones" },
-    { label: "Contacto",  href: "/contact" },
-  ],
-  en: [
-    { label: "Home",      href: "/" },
-    { label: "Labs",      href: "/labs" },
-    { label: "Gestiones", href: "/gestiones" },
-    { label: "Contact",   href: "/contact" },
-  ],
-};
+const links = [
+  { label: "Inicio", href: "/" },
+  { label: "Labs", href: "/labs" },
+  { label: "Gestiones", href: GESTIONES_URL },
+  { label: "Nosotros", href: "/about" },
+];
 
 export default function Navbar() {
-  const { lang, toggleLang } = useApp();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 40);
+    const fn = () => setScrolled(window.scrollY > 24);
+    fn();
     window.addEventListener("scroll", fn, { passive: true });
     return () => window.removeEventListener("scroll", fn);
   }, []);
 
-  const navLinks = links[lang];
+  const solido = scrolled || open;
 
   return (
     <motion.nav
@@ -39,94 +31,70 @@ export default function Navbar() {
       transition={{ duration: 0.55, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        background: "var(--glass)",
-        backdropFilter: "blur(24px)",
-        WebkitBackdropFilter: "blur(24px)",
-        borderBottom: scrolled ? "1px solid var(--border)" : "1px solid transparent",
+        background: solido ? "rgba(255,255,255,0.82)" : "transparent",
+        backdropFilter: solido ? "blur(18px) saturate(1.4)" : "none",
+        WebkitBackdropFilter: solido ? "blur(18px) saturate(1.4)" : "none",
+        borderBottom: `1px solid ${scrolled ? "var(--border)" : "transparent"}`,
       }}
     >
       <div className="kl-container">
-        <div className="flex items-center justify-between py-4">
-
-          {/* Logo */}
+        <div className="flex items-center justify-between py-3.5">
           <a href="/" className="flex-shrink-0 group">
             <img
               src="/logos/kryphor_logo_light.png"
               alt="Grupo Kryphor"
-              className="h-16 w-auto object-contain transition-opacity group-hover:opacity-80"
+              className="h-14 w-auto object-contain transition-opacity group-hover:opacity-80"
             />
           </a>
 
-          {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8">
-
-            {navLinks.map(link => (
-              <a key={link.href} href={link.href}
-                className="nav-link font-inter font-medium text-base relative py-1 transition-colors duration-150"
-                style={{ color: "var(--fg-muted)" }}
-                onMouseEnter={e => (e.currentTarget.style.color = "var(--fg)")}
-                onMouseLeave={e => (e.currentTarget.style.color = "var(--fg-muted)")}>
+          <div className="hidden md:flex items-center gap-9">
+            {links.map(link => (
+              <a key={link.label} href={link.href}
+                className="nav-link font-inter font-medium text-[15px] text-slate-600 hover:text-slate-900 transition-colors py-1">
                 {link.label}
               </a>
             ))}
           </div>
 
-          {/* Controls */}
-          <div className="hidden md:flex items-center gap-2">
-            <CtrlBtn onClick={toggleLang} title={lang === "es" ? "English" : "Español"}>
-              <Globe size={15} />
-              <span className="text-sm font-bold">{lang === "es" ? "EN" : "ES"}</span>
-            </CtrlBtn>
+          <div className="hidden md:flex">
+            <a href="/contact"
+              className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full font-inter font-semibold text-sm text-white transition-all hover:brightness-110"
+              style={{ background: "var(--gestiones)", boxShadow: "0 8px 22px -10px rgba(15,23,42,0.6)" }}>
+              Contáctanos <ArrowUpRight size={16} />
+            </a>
           </div>
 
-          {/* Mobile burger */}
-          <button className="md:hidden p-2 rounded-lg transition-colors"
-            style={{ color: "var(--fg-muted)" }}
-            onClick={() => setOpen(!open)}>
-            {open ? <X size={22} /> : <Menu size={22} />}
+          <button className="md:hidden p-2 rounded-lg text-slate-700"
+            onClick={() => setOpen(!open)} aria-label={open ? "Cerrar menú" : "Abrir menú"} aria-expanded={open}>
+            {open ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {open && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden overflow-hidden"
-            style={{ borderTop: "1px solid var(--border)", background: "var(--glass)" }}
+            className="md:hidden overflow-hidden border-t border-slate-200/70"
           >
-            <div className="kl-container py-5 space-y-1">
-              {navLinks.map(link => (
-                <a key={link.href} href={link.href} onClick={() => setOpen(false)}
-                  className="block py-3 px-3 text-base font-inter rounded-xl"
-                  style={{ color: "var(--fg-muted)" }}>
+            <div className="kl-container py-4 flex flex-col">
+              {links.map(link => (
+                <a key={link.label} href={link.href} onClick={() => setOpen(false)}
+                  className="py-3 font-inter text-base text-slate-700">
                   {link.label}
                 </a>
               ))}
-              <button onClick={toggleLang}
-                className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-sm border font-inter mt-2"
-                style={{ color: "var(--fg-muted)", borderColor: "var(--border)" }}>
-                <Globe size={14} /> {lang === "es" ? "English" : "Español"}
-              </button>
+              <a href="/contact" onClick={() => setOpen(false)}
+                className="mt-3 mb-2 inline-flex items-center justify-center gap-1.5 py-3.5 rounded-full font-inter font-semibold text-white"
+                style={{ background: "var(--gestiones)" }}>
+                Contáctanos <ArrowUpRight size={17} />
+              </a>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </motion.nav>
-  );
-}
-
-function CtrlBtn({ children, onClick, title }: { children: React.ReactNode; onClick: () => void; title?: string }) {
-  return (
-    <button onClick={onClick} title={title}
-      className="flex items-center gap-2 px-3.5 py-2 rounded-xl border text-sm font-inter transition-all duration-150 hover:scale-[1.04]"
-      style={{ color: "var(--fg-muted)", borderColor: "var(--border)" }}
-      onMouseEnter={e => (e.currentTarget.style.color = "var(--fg)")}
-      onMouseLeave={e => (e.currentTarget.style.color = "var(--fg-muted)")}>
-      {children}
-    </button>
   );
 }

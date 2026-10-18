@@ -1,8 +1,13 @@
 export const runtime = "edge";
 
 import { NextRequest } from "next/server";
+import { auth } from "@/lib/auth";
 
 export async function POST(req: NextRequest) {
+  // solo el admin con sesion puede usar la ia, si no cualquiera gastaria la clave
+  const session = await auth();
+  if (!session?.user) return new Response("No autorizado", { status: 401 });
+
   const { messages, systemPrompt } = await req.json();
 
   const response = await fetch("https://api.anthropic.com/v1/messages", {

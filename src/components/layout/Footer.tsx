@@ -1,81 +1,82 @@
-"use client";
-import { Mail, MapPin } from "lucide-react";
-import { useApp } from "@/lib/providers";
+import { Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { GESTIONES_URL } from "@/data/gestiones";
 
-const legal = {
-  es: [
-    { label: "Nosotros",   href: "/about" },
-    { label: "Privacidad", href: "/privacy" },
-    { label: "Términos",   href: "/terms" },
-  ],
-  en: [
-    { label: "About",   href: "/about" },
-    { label: "Privacy", href: "/privacy" },
-    { label: "Terms",   href: "/terms" },
-  ],
-};
-
-const taglines = {
-  es: "Grupo de soluciones integrales: tecnología, gestión y medios para el Eje Cafetero.",
-  en: "Integrated solutions group: technology, management and media for the Coffee Region.",
-};
-
-const rights = {
-  es: "Todos los derechos reservados.",
-  en: "All rights reserved.",
-};
+const columnas = [
+  {
+    titulo: "Kryphor Labs",
+    enlaces: [
+      { label: "Desarrollo de software", href: "/labs" },
+      { label: "KryphorConnect", href: "https://connect.kryphorlabs.com" },
+      { label: "Aplicaciones", href: "/apps" },
+    ],
+  },
+  {
+    titulo: "Kryphor Gestiones",
+    enlaces: [
+      { label: "Afiliaciones EPS y ARL", href: GESTIONES_URL },
+      { label: "Pensión y caja", href: GESTIONES_URL },
+      { label: "Planilla de seguridad social", href: GESTIONES_URL },
+    ],
+  },
+  {
+    titulo: "Grupo",
+    enlaces: [
+      { label: "Nosotros", href: "/about" },
+      { label: "Contacto", href: "/contact" },
+      { label: "Privacidad", href: "/privacy" },
+      { label: "Términos", href: "/terms" },
+    ],
+  },
+];
 
 export default function Footer() {
-  const { lang, theme } = useApp();
-
   return (
-    <footer className="border-t" style={{ background: "var(--bg-2)", borderColor: "var(--border)" }}>
-      <div className="kl-container py-16">
-
-        {/* Main row */}
-        <div className="flex flex-col items-center text-center gap-6 mb-12">
-          <a href="/">
-            <img
-              src={theme === "light" ? "/logos/kryphor_logo_light.png" : "/logos/kryphor_logo_transparent.png"}
-              alt="Grupo Kryphor"
-              className="h-14 w-auto object-contain"
-            />
-          </a>
-          <p className="font-inter text-base max-w-sm"
-            style={{ color: "var(--fg-muted)", lineHeight: 1.8 }}>
-            {taglines[lang]}
-          </p>
-          <a href="mailto:kryphorlabs@gmail.com"
-            className="inline-flex items-center gap-2 text-sm font-inter transition-colors"
-            style={{ color: "var(--fg-muted)" }}
-            onMouseEnter={e => (e.currentTarget.style.color = "var(--fg)")}
-            onMouseLeave={e => (e.currentTarget.style.color = "var(--fg-muted)")}>
-            <Mail size={14} />
-            kryphorlabs@gmail.com
-          </a>
-          <p className="inline-flex items-center gap-2 text-sm font-inter" style={{ color: "var(--fg-muted)" }}>
-            <MapPin size={14} />
-            Armenia, Quindío — Colombia
-          </p>
-          <div className="flex items-center gap-6">
-            {legal[lang].map(l => (
-              <a key={l.href} href={l.href}
-                className="font-inter text-sm transition-colors"
-                style={{ color: "var(--fg-muted)" }}
-                onMouseEnter={e => (e.currentTarget.style.color = "var(--fg)")}
-                onMouseLeave={e => (e.currentTarget.style.color = "var(--fg-muted)")}>
-                {l.label}
+    <footer className="relative isolate overflow-hidden" style={{ background: "#0B1220" }}>
+      <div className="absolute inset-0 -z-10 opacity-70" style={{
+        background: "radial-gradient(40% 60% at 0% 0%, rgba(79,70,229,0.22), transparent 60%)",
+      }} />
+      <div className="kl-container pt-20 pb-10">
+        <div className="grid gap-12 lg:grid-cols-[1.3fr_2fr]">
+          <div>
+            <img src="/logos/kryphor_logo_transparent.png" alt="Grupo Kryphor" className="h-16 w-auto object-contain" />
+            <p className="font-inter text-[15px] text-slate-400 mt-6 max-w-sm" style={{ lineHeight: 1.75 }}>
+              Grupo de soluciones integrales: tecnología, gestión y medios para el Eje Cafetero.
+            </p>
+            <div className="mt-7 space-y-3">
+              <a href="mailto:kryphorlabs@gmail.com"
+                className="flex items-center gap-2.5 font-inter text-[15px] text-slate-300 hover:text-white transition-colors">
+                <Mail size={16} className="text-indigo-400" /> kryphorlabs@gmail.com
               </a>
+              <p className="flex items-center gap-2.5 font-inter text-[15px] text-slate-300">
+                <MapPin size={16} className="text-indigo-400" /> Armenia, Quindío — Colombia
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-10">
+            {columnas.map(c => (
+              <div key={c.titulo}>
+                <p className="font-inter font-semibold text-sm text-white mb-5">{c.titulo}</p>
+                <ul className="space-y-3">
+                  {c.enlaces.map(e => (
+                    <li key={e.label}>
+                      <a href={e.href}
+                        className="group inline-flex items-center gap-1 font-inter text-[15px] text-slate-400 hover:text-white transition-colors">
+                        {e.label}
+                        {e.href.startsWith("http") && <ArrowUpRight size={14} className="opacity-60" />}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="border-t pt-8 text-center"
-          style={{ borderColor: "var(--border)" }}>
-          <p className="font-inter text-sm" style={{ color: "var(--fg-muted)" }}>
-            © 2026 Grupo Kryphor · Kryphor Labs® · Kryphor Gestiones — {rights[lang]}
-          </p>
+        <div className="mt-16 pt-8 border-t flex flex-col sm:flex-row gap-3 justify-between"
+          style={{ borderColor: "rgba(255,255,255,0.08)" }}>
+          <p className="font-inter text-[13px] text-slate-500">© 2026 Grupo Kryphor. Todos los derechos reservados.</p>
+          <p className="font-inter text-[13px] text-slate-500">Kryphor Labs® · Kryphor Gestiones</p>
         </div>
       </div>
     </footer>
