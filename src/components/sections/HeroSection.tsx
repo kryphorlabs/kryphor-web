@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Wifi } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
 import { useApp } from "@/lib/providers";
 
 const copy = {
@@ -9,18 +9,18 @@ const copy = {
     badge: "Kryphor Labs · Grupo Kryphor",
     h1a: "Estudio de desarrollo de software",
     h1b: "y soluciones digitales.",
-    sub: "Creamos plataformas como KryphorConnect, aplicaciones y soluciones tecnológicas que ayudan a personas y organizaciones a crecer.",
+    sub: "Creamos aplicaciones como Mi Devocionario y soluciones tecnológicas que ayudan a personas y organizaciones a crecer.",
     cta1: "Explorar Ecosistema",
-    cta2: "Ver KryphorConnect",
+    cta2: "Ver Mi Devocionario",
     scrollHint: "Desplázate para explorar",
   },
   en: {
     badge: "Kryphor Labs · Grupo Kryphor",
     h1a: "Software development studio",
     h1b: "and digital solutions.",
-    sub: "We build platforms such as KryphorConnect, applications and technological solutions that help people and organizations grow.",
+    sub: "We build applications such as Mi Devocionario and technological solutions that help people and organizations grow.",
     cta1: "Explore Ecosystem",
-    cta2: "See KryphorConnect",
+    cta2: "See Mi Devocionario",
     scrollHint: "Scroll to explore",
   },
 };
@@ -201,7 +201,7 @@ export default function HeroSection() {
             }}>
             {c.cta1} <ArrowRight size={16} />
           </a>
-          <a href="https://connect.kryphorlabs.com"
+          <a href="/apps/mi-devocionario"
             className="inline-flex items-center justify-center gap-2.5 px-11 py-5 rounded-full font-poppins font-semibold whitespace-nowrap transition-all duration-200 hover:scale-[1.04]"
             style={{
               fontSize: "clamp(13px, 1.2vw, 15px)",
@@ -212,7 +212,7 @@ export default function HeroSection() {
             onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "var(--fg)"}
             onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "var(--fg-muted)"}
           >
-            <Wifi size={16} style={{ color: "#4FA8D8" }} />
+            <BookOpen size={16} style={{ color: "#D4AF37" }} />
             {c.cta2}
           </a>
         </motion.div>

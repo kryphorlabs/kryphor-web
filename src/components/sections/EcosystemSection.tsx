@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowRight, Wifi, Monitor, Layout, BarChart2, Check } from "lucide-react";
+import { ArrowRight, BookOpen, Globe, Bell, WifiOff, Check } from "lucide-react";
 import { useApp } from "@/lib/providers";
 
 const copy = {
@@ -9,20 +9,20 @@ const copy = {
     title: "Un acceso a la vez.",
     sub: "Cada producto se publica aquí solo cuando está terminado y funcionando de verdad.",
     available: "Disponible",
-    open: "Abrir KryphorConnect",
-    name: "KryphorConnect",
-    desc: "Plataforma de publicidad digital para pantallas Android TV. Gestiona campañas, contenido y estadísticas desde un panel web centralizado.",
-    features: ["App nativa para Android TV", "Panel web de campañas", "Estadísticas en tiempo real"],
+    open: "Ver Mi Devocionario",
+    name: "Mi Devocionario",
+    desc: "App de oración católica con el Santo Rosario completo, más de 20 novenas paso a paso, versículo diario y recordatorio de oración.",
+    features: ["Santo Rosario y más de 20 novenas", "Funciona sin internet", "Disponible en 17 idiomas"],
   },
   en: {
     eyebrow: "What we're building",
     title: "One access at a time.",
     sub: "Each product is published here only once it's finished and truly working.",
     available: "Available",
-    open: "Open KryphorConnect",
-    name: "KryphorConnect",
-    desc: "Digital advertising platform for Android TV screens. Manage campaigns, content and stats from a centralized web panel.",
-    features: ["Native Android TV app", "Campaign web panel", "Real-time statistics"],
+    open: "See Mi Devocionario",
+    name: "Mi Devocionario",
+    desc: "Catholic prayer app with the complete Holy Rosary, more than 20 step-by-step novenas, daily verse and prayer reminder.",
+    features: ["Holy Rosary and 20+ novenas", "Works offline", "Available in 17 languages"],
   },
 };
 
@@ -55,7 +55,7 @@ export default function EcosystemSection() {
           </p>
         </motion.div>
 
-        {/* Connect access window */}
+        {/* Producto publicado */}
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -70,8 +70,8 @@ export default function EcosystemSection() {
             <div className="lg:col-span-3 p-12 sm:p-16 lg:p-20 flex flex-col justify-center">
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
-                  style={{ background: "rgba(79,168,216,0.12)", border: "1px solid rgba(79,168,216,0.25)" }}>
-                  <Wifi size={24} style={{ color: "#4FA8D8" }} />
+                  style={{ background: "rgba(212,175,55,0.12)", border: "1px solid rgba(212,175,55,0.25)" }}>
+                  <BookOpen size={24} style={{ color: "#D4AF37" }} />
                 </div>
                 <span className="font-poppins font-semibold text-xs px-3 py-1.5 rounded-full"
                   style={{ color: "#22c55e", background: "rgba(34,197,94,0.1)", border: "1px solid rgba(34,197,94,0.25)" }}>
@@ -90,15 +90,15 @@ export default function EcosystemSection() {
               <ul className="space-y-4 mb-12">
                 {c.features.map(f => (
                   <li key={f} className="flex items-center gap-3.5">
-                    <Check size={14} style={{ color: "#4FA8D8", flexShrink: 0 }} />
+                    <Check size={14} style={{ color: "#D4AF37", flexShrink: 0 }} />
                     <span className="font-inter text-sm" style={{ color: "var(--fg-muted)" }}>{f}</span>
                   </li>
                 ))}
               </ul>
 
-              <a href="https://connect.kryphorlabs.com"
+              <a href="/apps/mi-devocionario"
                 className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full font-poppins font-semibold text-sm text-white w-fit transition-all duration-200 hover:scale-[1.03]"
-                style={{ background: "linear-gradient(135deg, #4FA8D8, #7C7FE0)", boxShadow: "0 8px 32px rgba(79,168,216,0.18)" }}>
+                style={{ background: "linear-gradient(135deg, #D4AF37, #B8860B)", boxShadow: "0 8px 32px rgba(212,175,55,0.18)" }}>
                 {c.open} <ArrowRight size={15} />
               </a>
             </div>
@@ -107,10 +107,10 @@ export default function EcosystemSection() {
             <div className="lg:col-span-2 relative flex items-center justify-center p-12 sm:p-16"
               style={{ background: "var(--bg-3)", borderTop: "1px solid var(--border)" }}>
               <div className="grid grid-cols-2 gap-5 w-full max-w-[280px]">
-                <FeatureIcon icon={Monitor} color="#4FA8D8" />
-                <FeatureIcon icon={Layout} color="#7C7FE0" />
-                <FeatureIcon icon={BarChart2} color="#4FA8D8" />
-                <FeatureIcon icon={Wifi} color="#7C7FE0" />
+                <FeatureIcon icon={BookOpen} color="#D4AF37" />
+                <FeatureIcon icon={Globe} color="#7C7FE0" />
+                <FeatureIcon icon={Bell} color="#7C7FE0" />
+                <FeatureIcon icon={WifiOff} color="#D4AF37" />
               </div>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function EcosystemSection() {
   );
 }
 
-function FeatureIcon({ icon: Icon, color }: { icon: typeof Wifi; color: string }) {
+function FeatureIcon({ icon: Icon, color }: { icon: typeof BookOpen; color: string }) {
   return (
     <div className="aspect-square rounded-2xl flex items-center justify-center"
       style={{ background: `${color}12`, border: `1px solid ${color}25` }}>

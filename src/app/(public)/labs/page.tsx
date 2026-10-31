@@ -7,7 +7,7 @@ import ContactSection from "@/components/sections/ContactSection";
 export const metadata: Metadata = {
   title: "Kryphor Labs — Desarrollo de software y soluciones digitales",
   description:
-    "Kryphor Labs es el estudio de desarrollo de software y soluciones digitales del Grupo Kryphor. Creamos plataformas como KryphorConnect, aplicaciones y productos digitales desde el Quindío.",
+    "Kryphor Labs es el estudio de desarrollo de software y soluciones digitales del Grupo Kryphor. Creamos aplicaciones como Mi Devocionario y productos digitales desde el Quindío.",
   alternates: { canonical: "/labs" },
   openGraph: {
     title: "Kryphor Labs — Desarrollo de software y soluciones digitales",

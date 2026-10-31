@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { MapPin, Clock, ShieldCheck, Code, Smartphone, MonitorPlay, Workflow, HeartPulse, PiggyBank, HardHat, ReceiptText } from "lucide-react";
+import { MapPin, Clock, ShieldCheck, Code, Smartphone, BookOpen, Workflow, HeartPulse, PiggyBank, HardHat, ReceiptText } from "lucide-react";
 
 const curva = [0.16, 1, 0.3, 1] as const;
 const entrada = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, margin: "-60px" } };
@@ -17,7 +17,7 @@ const especialidades = [
     color: "#4F46E5",
     items: [
       { icono: Code, texto: "Software a la medida para empresas" },
-      { icono: MonitorPlay, texto: "KryphorConnect: publicidad en pantallas" },
+      { icono: BookOpen, texto: "Mi Devocionario: oración católica en 17 idiomas" },
       { icono: Smartphone, texto: "Aplicaciones web y móviles" },
       { icono: Workflow, texto: "Automatización de procesos" },
     ],

@@ -6,7 +6,7 @@ const columnas = [
     titulo: "Kryphor Labs",
     enlaces: [
       { label: "Desarrollo de software", href: "/labs" },
-      { label: "KryphorConnect", href: "https://connect.kryphorlabs.com" },
+      { label: "Mi Devocionario", href: "/apps/mi-devocionario" },
       { label: "Aplicaciones", href: "/apps" },
     ],
   },

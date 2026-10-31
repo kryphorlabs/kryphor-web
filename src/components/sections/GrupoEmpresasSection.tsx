@@ -1,36 +1,36 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowRight, Clapperboard, Check, Monitor, Activity } from "lucide-react";
+import { ArrowRight, Clapperboard, Check, BookOpen } from "lucide-react";
 import { MarcaGestiones } from "@/components/gestiones/Logo";
 import { GESTIONES_URL } from "@/data/gestiones";
 
 const curva = [0.16, 1, 0.3, 1] as const;
 
-// Vista previa de Labs: un mini panel de KryphorConnect con pantallas activas.
+// Vista previa de Labs: el plan de oración de hoy en Mi Devocionario.
 function VistaLabs() {
-  const pantallas = [
-    { nombre: "Centro", estado: "En vivo" },
-    { nombre: "Plaza", estado: "En vivo" },
-    { nombre: "Norte", estado: "Programada" },
+  const plan = [
+    { nombre: "Santo Rosario", detalle: "Misterios gozosos", progreso: 40 },
+    { nombre: "Novena a San Judas", detalle: "Día 3 de 9", progreso: 33 },
+    { nombre: "Versículo del día", detalle: "Juan 1, 29", progreso: 100 },
   ];
   return (
     <div className="rounded-2xl p-4 backdrop-blur-sm" style={{ background: "rgba(255,255,255,0.10)", border: "1px solid rgba(255,255,255,0.18)" }}>
       <div className="flex items-center justify-between mb-3">
-        <span className="font-inter text-[12px] font-semibold text-white/90">KryphorConnect · Panel</span>
-        <span className="inline-flex items-center gap-1 font-inter text-[11px] text-emerald-200"><Activity size={12} /> en vivo</span>
+        <span className="font-inter text-[12px] font-semibold text-white/90">Mi Devocionario · Hoy</span>
+        <span className="inline-flex items-center gap-1 font-inter text-[11px]" style={{ color: "#F5D97A" }}><BookOpen size={12} /> plan de oración</span>
       </div>
-      <div className="flex items-end gap-1.5 h-12 mb-3">
-        {[40, 62, 48, 78, 58, 90, 72, 96, 84].map((h, i) => (
-          <motion.span key={i} className="flex-1 rounded-sm" style={{ background: "rgba(255,255,255,0.55)" }}
-            initial={{ height: 0 }} animate={{ height: `${h}%` }}
-            transition={{ duration: 0.8, delay: 0.6 + i * 0.05, ease: curva }} />
-        ))}
-      </div>
-      <ul className="grid sm:grid-cols-3 gap-1.5">
-        {pantallas.map(p => (
-          <li key={p.nombre} className="flex items-center justify-between rounded-lg px-2.5 py-1.5" style={{ background: "rgba(255,255,255,0.08)" }}>
-            <span className="inline-flex items-center gap-2 font-inter text-[12px] text-white/90"><Monitor size={13} /> {p.nombre}</span>
-            <span className="font-inter text-[11px] text-white/60">{p.estado}</span>
+      <ul className="space-y-1.5">
+        {plan.map((p, i) => (
+          <li key={p.nombre} className="rounded-lg px-2.5 py-1.5" style={{ background: "rgba(255,255,255,0.08)" }}>
+            <div className="flex items-center justify-between mb-1">
+              <span className="font-inter text-[12px] text-white/90">{p.nombre}</span>
+              <span className="font-inter text-[11px] text-white/60">{p.detalle}</span>
+            </div>
+            <div className="h-1 rounded-full" style={{ background: "rgba(255,255,255,0.15)" }}>
+              <motion.div className="h-1 rounded-full" style={{ background: "#F5D97A" }}
+                initial={{ width: 0 }} animate={{ width: `${p.progreso}%` }}
+                transition={{ duration: 0.8, delay: 0.6 + i * 0.12, ease: curva }} />
+            </div>
           </li>
         ))}
       </ul>
@@ -69,8 +69,8 @@ const empresas = [
     href: "/labs",
     linea: "Tecnología",
     nombre: "Kryphor Labs",
-    desc: "Desarrollo de Software y Plataformas como KryphorConnect.",
-    chips: ["Software a la medida", "KryphorConnect", "Apps y plataformas"],
+    desc: "Desarrollo de software y aplicaciones como Mi Devocionario.",
+    chips: ["Software a la medida", "Mi Devocionario", "Apps y plataformas"],
     cta: "Conocer Kryphor Labs",
     fondo: "linear-gradient(150deg, #5B54F0 0%, #4F46E5 40%, #3730A3 100%)",
     brillo: "rgba(199,210,254,0.45)",

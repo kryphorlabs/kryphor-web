@@ -25,7 +25,7 @@ const organizacion = {
       "@type": "Organization",
       name: "Kryphor Labs",
       url: `${SITIO}/labs`,
-      description: "Estudio de desarrollo de software y soluciones digitales, creadores de KryphorConnect.",
+      description: "Estudio de desarrollo de software y soluciones digitales, creadores de Mi Devocionario.",
       address: direccion,
     },
     {

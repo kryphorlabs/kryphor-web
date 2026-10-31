@@ -9,16 +9,7 @@ const copy = {
   es: {
     eyebrow: "Ecosistema",
     title: "Nuestro ecosistema.",
-    sub: "Aplicaciones construidas para acompañarte cada día: espiritualidad, productividad, finanzas y más.",
-    filters: {
-      Todos:        "Todos",
-      Conectividad: "Conectividad",
-      Espiritual:   "Espiritual",
-      Productividad:"Productividad",
-      Bienestar:    "Bienestar",
-      Finanzas:     "Finanzas",
-      Agrícola:     "Agrícola",
-    },
+    sub: "Aplicaciones construidas para acompañarte cada día. Cada una aparece aquí cuando ya está publicada.",
     status: {
       disponible:      "Disponible",
       "en-desarrollo": "En desarrollo",
@@ -46,16 +37,7 @@ const copy = {
   en: {
     eyebrow: "Ecosystem",
     title: "Our ecosystem.",
-    sub: "Applications built to accompany you every day: spirituality, productivity, finances and more.",
-    filters: {
-      Todos:        "All",
-      Conectividad: "Connectivity",
-      Espiritual:   "Spiritual",
-      Productividad:"Productivity",
-      Bienestar:    "Wellness",
-      Finanzas:     "Finance",
-      Agrícola:     "Agricultural",
-    },
+    sub: "Applications built to accompany you every day. Each one appears here once it is published.",
     status: {
       disponible:      "Available",
       "en-desarrollo": "In Development",
@@ -91,15 +73,12 @@ const categoryIcons: Record<App["category"], typeof Layers> = {
   Agrícola:     Layers,
 };
 
-const filterKeys = ["Todos", "Conectividad", "Espiritual", "Productividad", "Bienestar", "Finanzas", "Agrícola"] as const;
 
 export default function AppsPage() {
   const { lang } = useApp();
   const c = copy[lang];
-  const [filter, setFilter] = useState<string>("Todos");
   const [expanded, setExpanded] = useState<string | null>(null);
 
-  const filtered = filter === "Todos" ? apps : apps.filter(a => a.category === filter);
   const toggle = (id: string) => setExpanded(expanded === id ? null : id);
 
   return (
@@ -130,27 +109,10 @@ export default function AppsPage() {
 
       <div className="max-w-5xl mx-auto px-8 sm:px-12 py-20">
 
-        {/* Filters */}
-        <div className="flex flex-wrap gap-3 mb-16">
-          {filterKeys.map(f => (
-            <button
-              key={f}
-              onClick={() => { setFilter(f); setExpanded(null); }}
-              className="px-5 py-2.5 rounded-full text-sm font-poppins font-semibold transition-all duration-200"
-              style={
-                filter === f
-                  ? { background: "linear-gradient(135deg, var(--accent), var(--accent-b))", color: "#fff" }
-                  : { background: "var(--bg-2)", color: "var(--fg-muted)", border: "1px solid var(--border)" }
-              }
-            >
-              {c.filters[f as keyof typeof c.filters]}
-            </button>
-          ))}
-        </div>
 
         {/* App cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {filtered.map(app => {
+          {apps.map(app => {
             const CatIcon = categoryIcons[app.category];
             const isOpen = expanded === app.id;
             const statusColor = c.statusColor[app.status];

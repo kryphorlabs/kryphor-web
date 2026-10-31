@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "caja de compensación",
     "trámites de salud",
     "desarrollo de software",
-    "KryphorConnect",
+    "Mi Devocionario",
     "Armenia",
     "Circasia",
     "Quindío",
