@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.devocionario.app",
+      "sha256_cert_fingerprints": [
+        "91:15:9F:18:1B:92:B8:6A:C3:B0:23:B2:D7:57:93:D9:3E:4F:10:9C:39:26:8E:06:52:B6:FE:35:7C:22:2B:72"
+      ]
+    }
+  }
+]

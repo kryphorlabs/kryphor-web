@@ -31,6 +31,7 @@ const copy = {
     },
     features:  "Características",
     download:  "Descargar APK",
+    playStore: "Descargar en Google Play",
     catLabel: {
       Espiritual:   "Espiritual",
       Conectividad: "Conectividad",
@@ -67,6 +68,7 @@ const copy = {
     },
     features:  "Features",
     download:  "Download APK",
+    playStore: "Get it on Google Play",
     catLabel: {
       Espiritual:   "Spiritual",
       Conectividad: "Connectivity",
@@ -221,6 +223,15 @@ export default function AppsPage() {
                             </span>
                           ))}
                         </div>
+                        {app.playStoreUrl && (
+                          <a href={app.playStoreUrl} target="_blank" rel="noopener noreferrer"
+                            onClick={e => e.stopPropagation()}
+                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-poppins font-semibold text-sm text-white transition-all duration-200 hover:opacity-90"
+                            style={{ background: `linear-gradient(135deg, ${app.color}, ${app.color}aa)` }}>
+                            <Download size={14} />
+                            {c.playStore}
+                          </a>
+                        )}
                         {app.apkUrl && (
                           <a href={app.apkUrl} download
                             onClick={e => e.stopPropagation()}

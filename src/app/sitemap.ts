@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://kryphorlabs.com";
   // gestiones sale del sitemap mientras no sea publica o cuando ya viva en su subdominio
   const gestiones = GESTIONES_PUBLICA && !GESTIONES_SUBDOMINIO_ACTIVO ? ["/gestiones"] : [];
-  const routes = ["", "/labs", ...gestiones, "/about", "/apps", "/contact", "/privacy", "/terms"];
+  const routes = ["", "/labs", ...gestiones, "/about", "/apps", "/apps/mi-devocionario", "/contact", "/privacy", "/terms"];
 
   return routes.map(route => ({
     url: `${base}${route}`,
