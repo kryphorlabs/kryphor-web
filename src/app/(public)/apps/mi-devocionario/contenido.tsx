@@ -38,7 +38,7 @@ function BotonPlayStore() {
       rel="noopener noreferrer"
       whileHover={{ scale: 1.04 }}
       whileTap={{ scale: 0.98 }}
-      className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-poppins font-semibold text-base"
+      className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3.5 rounded-full font-poppins font-semibold text-[15px] sm:text-base whitespace-nowrap"
       style={{ background: `linear-gradient(135deg, #F0D27A, ${DORADO} 50%, #B8860B)`, color: "#0D0D2B", boxShadow: "0 8px 32px rgba(212,175,55,0.35)" }}
     >
       <Download size={18} /> Descargar en Google Play

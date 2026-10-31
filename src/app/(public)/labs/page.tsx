@@ -3,6 +3,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import EcosystemSection from "@/components/sections/EcosystemSection";
 import ContactSection from "@/components/sections/ContactSection";
+import { ServiciosLabs, CasosLabs, ProcesoLabs } from "@/components/sections/LabsSecciones";
 
 export const metadata: Metadata = {
   title: "Kryphor Labs — Desarrollo de software y soluciones digitales",
@@ -20,8 +21,11 @@ export default function LabsPage() {
   return (
     <>
       <HeroSection />
-      <AboutSection />
+      <ServiciosLabs />
+      <CasosLabs />
       <EcosystemSection />
+      <ProcesoLabs />
+      <AboutSection />
       <ContactSection />
     </>
   );

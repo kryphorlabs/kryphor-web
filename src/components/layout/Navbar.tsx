@@ -7,6 +7,7 @@ import { GESTIONES_URL } from "@/data/gestiones";
 const links = [
   { label: "Inicio", href: "/" },
   { label: "Labs", href: "/labs" },
+  { label: "Apps", href: "/apps" },
   { label: "Gestiones", href: GESTIONES_URL },
   { label: "Nosotros", href: "/about" },
 ];
