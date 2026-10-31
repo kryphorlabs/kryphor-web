@@ -6,7 +6,7 @@ const curva = [0.16, 1, 0.3, 1] as const;
 const entrada = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, margin: "-60px" } };
 
 const valores = [
-  { icono: MapPin, titulo: "Somos de aquí", texto: "Equipo del Quindío que conoce la región, sus empresas y sus trámites.", color: "#4F46E5", tono: "#EEF2FF" },
+  { icono: MapPin, titulo: "Cerca de ti", texto: "Un equipo que conoce los trámites y te acompaña en línea desde cualquier lugar del país.", color: "#4F46E5", tono: "#EEF2FF" },
   { icono: Clock, titulo: "Respuesta rápida", texto: "Tiempos claros desde el primer contacto, sin filas ni vueltas innecesarias.", color: "#0284C7", tono: "#E0F2FE" },
   { icono: ShieldCheck, titulo: "Respaldo real", texto: "Procesos ordenados y tecnología propia detrás de cada servicio que ofrecemos.", color: "#15803D", tono: "#DCFCE7" },
 ];
@@ -45,7 +45,7 @@ export default function GrupoValoresSection() {
               Cerca de la gente, serios con cada proceso.
             </h2>
             <p className="font-inter text-lg text-slate-600 mt-6" style={{ lineHeight: 1.7 }}>
-              Desde Armenia y Circasia atendemos empresas, independientes y familias del Eje Cafetero con el mismo
+              Atendemos en línea a empresas, independientes y familias de toda Colombia con el mismo
               cuidado, sea un trámite de afiliación o una plataforma de software.
             </p>
           </motion.div>

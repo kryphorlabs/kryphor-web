@@ -18,7 +18,7 @@ const negocio = {
   description:
     "Afiliaciones a EPS, pensión, ARL y caja de compensación, y pago de planilla de seguridad social en 24 horas, sin filas y por WhatsApp.",
   address: { "@type": "PostalAddress", addressLocality: "Circasia", addressRegion: "Quindío", addressCountry: "CO" },
-  areaServed: ["Circasia", "Armenia", "Quindío", "Eje Cafetero"],
+  areaServed: ["Colombia"],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Servicios de seguridad social",

@@ -20,7 +20,7 @@ export default function GrupoHeroSection() {
           style={{ border: "1px solid rgba(15,23,42,0.08)" }}
         >
           <MapPin size={14} className="text-indigo-600" />
-          Grupo empresarial · Armenia, Quindío
+          Grupo empresarial · Colombia
         </motion.div>
 
         <motion.h1
@@ -53,7 +53,7 @@ export default function GrupoHeroSection() {
           className="font-inter text-slate-600 max-w-xl mt-7"
           style={{ fontSize: "clamp(17px, 1.7vw, 21px)", lineHeight: 1.6 }}
         >
-          Tecnología, Gestión y Medios para el Eje Cafetero.
+          Tecnología y gestión para toda Colombia.
         </motion.p>
       </div>
     </section>

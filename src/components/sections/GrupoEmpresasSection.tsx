@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowRight, Clapperboard, Check, BookOpen } from "lucide-react";
+import { ArrowRight, Check, BookOpen } from "lucide-react";
 import { MarcaGestiones } from "@/components/gestiones/Logo";
 import { GESTIONES_URL } from "@/data/gestiones";
 
@@ -133,23 +133,6 @@ export default function GrupoEmpresasSection() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="max-w-6xl mx-auto mt-6 rounded-2xl px-6 sm:px-8 py-5 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-5 bg-white/70 backdrop-blur"
-          style={{ border: "1px dashed rgba(15,23,42,0.16)" }}
-        >
-          <span className="w-10 h-10 rounded-xl grid place-items-center flex-shrink-0 bg-amber-50 text-amber-600">
-            <Clapperboard size={18} strokeWidth={1.75} />
-          </span>
-          <p className="font-inter text-base text-slate-600">
-            <span className="font-semibold text-slate-900">Kryphor Media</span> — Contenido y medios para la región.
-          </p>
-          <span className="sm:ml-auto font-inter text-xs font-medium px-2.5 py-1 rounded-full bg-amber-50 text-amber-700">
-            Próximamente
-          </span>
-        </motion.div>
       </div>
     </section>
   );

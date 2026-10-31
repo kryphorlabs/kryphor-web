@@ -10,7 +10,7 @@ export default function Pie() {
           <div>
             <LogoGestiones claro />
             <p className="font-inter text-[15px] text-slate-400 mt-6 max-w-sm" style={{ lineHeight: 1.7 }}>
-              Afiliaciones y trámites de seguridad social para independientes, empresas y familias del Quindío.
+              Afiliaciones y trámites de seguridad social para independientes, empresas y familias de toda Colombia.
             </p>
           </div>
 

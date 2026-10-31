@@ -21,10 +21,9 @@ export function enlaceWhatsapp(mensaje: string = MENSAJE): string {
   return `https://wa.me/${WHATSAPP_GESTIONES}?text=${encodeURIComponent(mensaje)}`;
 }
 
-export const MUNICIPIOS_QUINDIO = [
-  "Armenia", "Buenavista", "Calarcá", "Circasia", "Córdoba", "Filandia",
-  "Génova", "La Tebaida", "Montenegro", "Pijao", "Quimbaya", "Salento",
-];
+// Cómo atendemos: el primero se resalta en la sección de cobertura
+export const COBERTURA = ["Toda Colombia", "Atención en línea", "Por WhatsApp", "Oficina en Circasia, Quindío"];
+
 
 export interface Servicio {
   id: string;
@@ -105,7 +104,7 @@ export const PREGUNTAS: Pregunta[] = [
     id: "ubicacion",
     pregunta: "¿Dónde están ubicados?",
     respuesta:
-      "Estamos en Circasia, Quindío, y atendemos en línea a todo el departamento y el Eje Cafetero, sin que tengas que desplazarte.",
+      "Nuestra oficina está en Circasia, Quindío, y atendemos en línea a personas y empresas de toda Colombia, sin que tengas que desplazarte.",
   },
 ];
 

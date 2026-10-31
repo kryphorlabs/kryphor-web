@@ -19,7 +19,7 @@ const organizacion = {
   email: "kryphorlabs@gmail.com",
   description: DESCRIPCION,
   address: direccion,
-  areaServed: ["Quindío", "Eje Cafetero", "Colombia"],
+  areaServed: ["Colombia"],
   subOrganization: [
     {
       "@type": "Organization",

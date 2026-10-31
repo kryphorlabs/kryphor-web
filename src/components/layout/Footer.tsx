@@ -40,7 +40,7 @@ export default function Footer() {
           <div>
             <img src="/logos/kryphor_logo_transparent.png" alt="Grupo Kryphor" className="h-16 w-auto object-contain" />
             <p className="font-inter text-[15px] text-slate-400 mt-6 max-w-sm" style={{ lineHeight: 1.75 }}>
-              Grupo de soluciones integrales: tecnología, gestión y medios para el Eje Cafetero.
+              Grupo de soluciones integrales: tecnología y gestión para toda Colombia.
             </p>
             <div className="mt-7 space-y-3">
               <a href="mailto:kryphorlabs@gmail.com"

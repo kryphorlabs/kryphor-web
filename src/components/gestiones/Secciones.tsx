@@ -6,7 +6,7 @@ import {
   Users, Clock, MapPin, MessageCircle, ListChecks, Plus, Check, ArrowRight,
 } from "lucide-react";
 import {
-  SERVICIOS, DOCUMENTOS, PREGUNTAS, MUNICIPIOS_QUINDIO, enlaceWhatsapp, WHATSAPP_VISIBLE,
+  SERVICIOS, DOCUMENTOS, PREGUNTAS, COBERTURA, enlaceWhatsapp, WHATSAPP_VISIBLE,
 } from "@/data/gestiones";
 
 const curva = [0.16, 1, 0.3, 1] as const;
@@ -119,7 +119,7 @@ export function PorQue() {
   const cifras = [
     { valor: "24 h", texto: "para radicar tu trámite con documentos completos" },
     { valor: "0", texto: "filas y oficinas: todo se hace a distancia" },
-    { valor: "12", texto: "municipios del Quindío atendidos en línea" },
+    { valor: "100 %", texto: "en línea, desde cualquier ciudad del país" },
   ];
   const razones = [
     { icono: Clock, titulo: "Rápido de verdad", texto: "No esperas semanas: te decimos qué falta y lo resolvemos ese mismo día." },
@@ -251,21 +251,21 @@ export function Cobertura() {
         <div className="lg:w-[38%]">
           <p className="font-inter font-semibold text-[13px] uppercase tracking-[0.16em] text-emerald-700 mb-4">Cobertura</p>
           <h2 className="font-inter font-semibold tracking-[-0.03em] text-slate-900" style={{ fontSize: "clamp(26px, 3vw, 36px)", lineHeight: 1.15 }}>
-            Desde Circasia, para todo el Quindío
+            Desde Circasia, para toda Colombia
           </h2>
           <p className="font-inter text-slate-600 mt-4 text-[16px]" style={{ lineHeight: 1.7 }}>
-            Atendemos en línea a cualquier municipio del departamento y del Eje Cafetero.
+            Atendemos en línea a cualquier ciudad o municipio del país, sin que tengas que desplazarte.
           </p>
         </div>
         <ul className="flex-1 flex flex-wrap gap-2.5">
-          {MUNICIPIOS_QUINDIO.map((m, i) => (
+          {COBERTURA.map((m, i) => (
             <motion.li key={m} {...entrada} transition={{ duration: 0.35, delay: i * 0.03 }}
               className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-inter text-[15px] ${
-                m === "Circasia" ? "text-white font-semibold" : "text-slate-700 bg-slate-50"}`}
-              style={m === "Circasia"
+                m === COBERTURA[0] ? "text-white font-semibold" : "text-slate-700 bg-slate-50"}`}
+              style={m === COBERTURA[0]
                 ? { background: "#0F172A" }
                 : { border: "1px solid rgba(15,23,42,0.08)" }}>
-              <MapPin size={15} className={m === "Circasia" ? "text-emerald-400" : "text-slate-400"} />
+              <MapPin size={15} className={m === COBERTURA[0] ? "text-emerald-400" : "text-slate-400"} />
               {m}
             </motion.li>
           ))}

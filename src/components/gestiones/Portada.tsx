@@ -105,7 +105,7 @@ export default function Portada() {
               <span className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-60" />
               <span className="relative w-2 h-2 rounded-full bg-emerald-500" />
             </span>
-            Circasia, Quindío · Atención en línea
+            Atención en línea en toda Colombia
           </motion.span>
 
           <motion.h1
@@ -131,7 +131,7 @@ export default function Portada() {
             style={{ fontSize: "clamp(17px, 1.6vw, 20px)", lineHeight: 1.65 }}
           >
             Afiliaciones a EPS, pensión, ARL y caja de compensación, y el pago de tu planilla cada mes.
-            Para independientes, empresas y familias del Quindío, todo desde tu celular.
+            Para independientes, empresas y familias de toda Colombia, todo desde tu celular.
           </motion.p>
 
           <motion.div
@@ -158,7 +158,7 @@ export default function Portada() {
             transition={{ duration: 0.6, delay: 0.45 }}
             className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2.5 mt-9"
           >
-            {["Respuesta el mismo día", "Te explicamos cada paso", "Equipo del Quindío"].map(t => (
+            {["Respuesta el mismo día", "Te explicamos cada paso", "Atención en todo el país"].map(t => (
               <li key={t} className="inline-flex items-center gap-2 font-inter text-sm text-slate-600">
                 <span className="w-5 h-5 rounded-full grid place-items-center bg-emerald-100 text-emerald-700">
                   <Check size={12} strokeWidth={3} />
