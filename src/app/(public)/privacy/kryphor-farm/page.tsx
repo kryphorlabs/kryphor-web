@@ -32,7 +32,7 @@ const versiones: Version[] = [
           "Datos de la finca: nombre, cultivos, lotes, moneda, idioma y país del celular.",
           "Labores, gastos, ventas, pagos y deudas que registras (fechas, valores, notas).",
           "Nombres de los trabajadores y de las personas o negocios a quienes les compras o vendes, si decides escribirlos.",
-          "Un identificador de cuenta anónimo que crea la app automáticamente. Si inicias sesión con Google, también tu nombre, correo y foto de perfil de Google.",
+          "Un identificador de cuenta anónimo que crea la app automáticamente. Si te registras con Google, también tu nombre, correo y foto de perfil de Google; si te registras con correo, tu correo (la contraseña la guarda Google Firebase cifrada y nosotros no la vemos).",
         ],
       },
       {
@@ -59,7 +59,8 @@ const versiones: Version[] = [
         titulo: "6. Cuánto tiempo los guardamos y cómo borrarlos",
         lista: [
           "Si usas la app sin iniciar sesión, tu cuenta anónima y sus datos se borran automáticamente a los 30 días. La app te avisa con tiempo para que te registres si quieres conservarlos.",
-          "Si inicias sesión con Google, guardamos tus datos mientras tengas la cuenta. Puedes pedir que borremos tu cuenta y todos sus datos escribiendo a " + CORREO + ".",
+          "Si te registras (con Google o con correo), guardamos tus datos mientras tengas la cuenta.",
+          "Puedes borrar tu cuenta y todos sus datos en cualquier momento desde la app, en Mi finca → Mi cuenta → Borrar mi cuenta y mis datos. También puedes pedirlo escribiendo a " + CORREO + ".",
           "Puedes borrar cualquier registro desde la app en cualquier momento.",
         ],
       },
@@ -99,7 +100,7 @@ const versiones: Version[] = [
           "Farm data: name, crops, plots, currency, language and the phone's country.",
           "The work, expenses, sales, payments and debts you log (dates, amounts, notes).",
           "Names of workers and of the people or businesses you buy from or sell to, if you choose to write them.",
-          "An anonymous account ID created automatically by the app. If you sign in with Google, also your Google name, email and profile picture.",
+          "An anonymous account ID created automatically by the app. If you sign up with Google, also your Google name, email and profile picture; if you sign up with email, your email address (the password is stored encrypted by Google Firebase and we never see it).",
         ],
       },
       {
@@ -118,7 +119,8 @@ const versiones: Version[] = [
         titulo: "5. Retention and deletion",
         lista: [
           "If you use the app without signing in, your anonymous account and its data are deleted automatically after 30 days. The app warns you in advance.",
-          "If you sign in with Google, we keep your data while you have the account. You can ask us to delete your account and all its data by writing to " + CORREO + ".",
+          "If you sign up (with Google or email), we keep your data while you have the account.",
+          "You can delete your account and all its data at any time from the app, in My farm → My account → Delete my account and data, or by writing to " + CORREO + ".",
           "You can delete any entry from the app at any time.",
         ],
       },
@@ -148,7 +150,7 @@ const versiones: Version[] = [
           "Dados da fazenda: nome, culturas, talhões, moeda, idioma e país do celular.",
           "Os trabalhos, gastos, vendas, pagamentos e dívidas que você registra (datas, valores, observações).",
           "Nomes de trabalhadores e de pessoas ou empresas de quem você compra ou para quem vende, se você decidir escrevê-los.",
-          "Um identificador de conta anônimo criado automaticamente. Se você entrar com o Google, também seu nome, e-mail e foto do Google.",
+          "Um identificador de conta anônimo criado automaticamente. Se você se cadastrar com o Google, também seu nome, e-mail e foto do Google; se for com e-mail, seu endereço de e-mail (a senha fica criptografada no Google Firebase e nós não a vemos).",
         ],
       },
       {
@@ -167,7 +169,8 @@ const versiones: Version[] = [
         titulo: "5. Prazo e exclusão",
         lista: [
           "Se você usa o aplicativo sem entrar com uma conta, a conta anônima e seus dados são apagados automaticamente após 30 dias. O aplicativo avisa antes.",
-          "Se você entrar com o Google, guardamos seus dados enquanto tiver a conta. Você pode pedir a exclusão da conta e de todos os dados escrevendo para " + CORREO + ".",
+          "Se você se cadastrar (com o Google ou e-mail), guardamos seus dados enquanto tiver a conta.",
+          "Você pode apagar sua conta e todos os dados a qualquer momento pelo aplicativo, em Minha fazenda → Minha conta → Apagar minha conta e meus dados, ou escrevendo para " + CORREO + ".",
           "Você pode apagar qualquer registro pelo aplicativo a qualquer momento.",
         ],
       },
