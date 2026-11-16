@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Términos de Servicio — Kryphor Labs",
   description:
-    "Términos de servicio de las aplicaciones de Kryphor Labs (Mi Devocionario, Kryphor Farm): uso, publicidad, suscripciones, reembolsos y contacto.",
+    "Términos de servicio de las aplicaciones de Kryphor Labs (Mi Devocionario, Kryphor Farm, Maru): uso, publicidad, suscripciones, reembolsos y contacto.",
   alternates: { canonical: "/terms" },
 };
 
@@ -22,7 +22,7 @@ const versiones: Version[] = [
       {
         titulo: "1. Quiénes somos",
         parrafos: [
-          "Estos términos aplican a las aplicaciones y servicios de Kryphor Labs (Grupo Kryphor), con domicilio en Armenia, Quindío, Colombia, incluidas Mi Devocionario y Kryphor Farm, y al sitio kryphorlabs.com. Al descargar o usar nuestras aplicaciones aceptas estos términos. Si no estás de acuerdo, no las uses.",
+          "Estos términos aplican a las aplicaciones y servicios de Kryphor Labs (Grupo Kryphor), con domicilio en Armenia, Quindío, Colombia, incluidas Mi Devocionario, Kryphor Farm y Maru, y al sitio kryphorlabs.com. Al descargar o usar nuestras aplicaciones aceptas estos términos. Si no estás de acuerdo, no las uses.",
         ],
       },
       {
@@ -54,6 +54,7 @@ const versiones: Version[] = [
         lista: [
           "Mi Devocionario ofrece contenido religioso con fines de oración y reflexión personal.",
           "Kryphor Farm es una herramienta para anotar las cuentas de la finca. Los totales y resúmenes dependen de lo que registras y no reemplazan la asesoría contable, tributaria ni legal.",
+          "Maru es un entretenimiento con juegos para ejercitar la mente. No es un servicio médico ni reemplaza la atención de un profesional de la salud. Los rubíes que se ganan en la app no tienen valor en dinero, no se compran ni se cambian por premios.",
         ],
       },
       {
@@ -95,7 +96,7 @@ const versiones: Version[] = [
       {
         titulo: "1. Who we are",
         parrafos: [
-          "These terms apply to the apps and services of Kryphor Labs (Grupo Kryphor), based in Armenia, Quindío, Colombia, including Mi Devocionario and Kryphor Farm, and to kryphorlabs.com. By downloading or using our apps you accept these terms. If you do not agree, do not use them.",
+          "These terms apply to the apps and services of Kryphor Labs (Grupo Kryphor), based in Armenia, Quindío, Colombia, including Mi Devocionario, Kryphor Farm and Maru, and to kryphorlabs.com. By downloading or using our apps you accept these terms. If you do not agree, do not use them.",
         ],
       },
       {
@@ -127,6 +128,7 @@ const versiones: Version[] = [
         lista: [
           "Mi Devocionario offers religious content for personal prayer and reflection.",
           "Kryphor Farm is a tool to record farm accounts. Totals and summaries depend on what you enter and are not accounting, tax or legal advice.",
+          "Maru is entertainment with games to exercise the mind. It is not a medical service and does not replace care from a health professional. The rubies earned in the app have no monetary value and cannot be bought or exchanged for prizes.",
         ],
       },
       {
@@ -168,7 +170,7 @@ const versiones: Version[] = [
       {
         titulo: "1. Quem somos",
         parrafos: [
-          "Estes termos se aplicam aos aplicativos e serviços da Kryphor Labs (Grupo Kryphor), com sede em Armenia, Quindío, Colômbia, incluindo Mi Devocionario e Kryphor Farm, e ao site kryphorlabs.com. Ao baixar ou usar nossos aplicativos, você aceita estes termos. Se não concordar, não os use.",
+          "Estes termos se aplicam aos aplicativos e serviços da Kryphor Labs (Grupo Kryphor), com sede em Armenia, Quindío, Colômbia, incluindo Mi Devocionario, Kryphor Farm e Maru, e ao site kryphorlabs.com. Ao baixar ou usar nossos aplicativos, você aceita estes termos. Se não concordar, não os use.",
         ],
       },
       {
@@ -200,6 +202,7 @@ const versiones: Version[] = [
         lista: [
           "O Mi Devocionario oferece conteúdo religioso para oração e reflexão pessoal.",
           "O Kryphor Farm é uma ferramenta para anotar as contas da propriedade rural. Totais e resumos dependem do que você registra e não substituem assessoria contábil, tributária ou jurídica.",
+          "O Maru é um entretenimento com jogos para exercitar a mente. Não é um serviço médico nem substitui o atendimento de um profissional de saúde. Os rubis ganhos no app não têm valor em dinheiro, não podem ser comprados nem trocados por prêmios.",
         ],
       },
       {
