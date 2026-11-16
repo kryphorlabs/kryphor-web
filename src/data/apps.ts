@@ -11,6 +11,8 @@ export interface App {
   icon: string;
   features: string[];
   subsidiary?: string;
+  /** Página propia de la app dentro del sitio. */
+  pagina?: string;
 }
 
 export const statusLabels: Record<App["status"], string> = {
@@ -32,6 +34,7 @@ export const apps: App[] = [
     icon: "📿",
     subsidiary: "Kryphor Labs",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.devocionario.app",
+    pagina: "/apps/mi-devocionario",
     features: [
       "Santo Rosario completo",
       "Más de 20 novenas",
@@ -39,5 +42,20 @@ export const apps: App[] = [
       "17 idiomas",
       "Recordatorio diario",
     ],
+  },
+  {
+    id: "maru",
+    name: "Maru",
+    tagline: "Juegos suaves para ejercitar la mente cada día",
+    description:
+      "Ocho juegos tranquilos para mantener la mente activa: parejas, sopa de letras, cálculo suave, botellas de colores, triángulos, carritos y más. Letra grande, sin prisa, 13 idiomas y una planta que crece contigo.",
+    category: "Bienestar",
+    status: "proximamente",
+    color: "#C8174F",
+    icon: "💎",
+    subsidiary: "Kryphor Labs",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.marumente.app",
+    pagina: "/apps/maru",
+    features: ["8 juegos", "Letra grande", "13 idiomas", "Sin cuentas", "Gratis"],
   },
 ];

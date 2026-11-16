@@ -185,6 +185,14 @@ export default function AppsPage() {
                             </span>
                           ))}
                         </div>
+                        {app.pagina && (
+                          <a href={app.pagina}
+                            onClick={e => e.stopPropagation()}
+                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-poppins font-semibold text-sm mr-2.5 mb-2.5 transition-all duration-200 hover:opacity-90"
+                            style={{ border: `1.5px solid ${app.color}`, color: app.color }}>
+                            Conocer la app
+                          </a>
+                        )}
                         {app.playStoreUrl && (
                           <a href={app.playStoreUrl} target="_blank" rel="noopener noreferrer"
                             onClick={e => e.stopPropagation()}
