@@ -34,7 +34,8 @@ const versiones: Version[] = [
         lista: [
           "Tu progreso: rubíes, nivel de cada juego, la planta que cuidas y tu jardín.",
           "La partida que tengas a medias, para que puedas seguir donde ibas.",
-          "Tus ajustes: tamaño de la letra, música, sonidos y voz.",
+          "Tus ajustes: tamaño de la letra, música, sonidos, voz y la hora del recordatorio.",
+          "Tu nombre, solo si lo escribes en Ajustes, para que la app te salude. No sale de tu celular.",
         ],
       },
       {
@@ -57,7 +58,8 @@ const versiones: Version[] = [
         lista: [
           "Internet: solo para mostrar los anuncios.",
           "Vibración: para dar una respuesta suave al tocar.",
-          "Mantener la pantalla encendida mientras juegas (no requiere permisos especiales).",
+          "Mantener la pantalla encendida mientras la app está abierta (no requiere permisos especiales).",
+          "Notificaciones: solo si activas el recordatorio diario. El aviso se programa en tu celular; no se envía nada por internet.",
         ],
       },
       {
@@ -102,7 +104,8 @@ const versiones: Version[] = [
         lista: [
           "Your progress: rubies, the level of each game, the plant you care for and your garden.",
           "The game you left unfinished, so you can continue where you were.",
-          "Your settings: text size, music, sounds and voice.",
+          "Your settings: text size, music, sounds, voice and reminder time.",
+          "Your name, only if you type it in Settings, so the app can greet you. It never leaves your phone.",
         ],
       },
       {
@@ -125,7 +128,8 @@ const versiones: Version[] = [
         lista: [
           "Internet: only to show ads.",
           "Vibration: for gentle feedback when you tap.",
-          "Keeping the screen on while you play (no special permission needed).",
+          "Keeping the screen on while the app is open (no special permission needed).",
+          "Notifications: only if you turn on the daily reminder. The reminder is scheduled on your phone; nothing is sent over the internet.",
         ],
       },
       {
@@ -170,7 +174,8 @@ const versiones: Version[] = [
         lista: [
           "Seu progresso: rubis, nível de cada jogo, a planta que você cuida e seu jardim.",
           "A partida que ficou pela metade, para você continuar de onde parou.",
-          "Seus ajustes: tamanho da letra, música, sons e voz.",
+          "Seus ajustes: tamanho da letra, música, sons, voz e a hora do lembrete.",
+          "Seu nome, só se você escrever nos Ajustes, para o app cumprimentar você. Ele não sai do seu celular.",
         ],
       },
       {
@@ -193,7 +198,8 @@ const versiones: Version[] = [
         lista: [
           "Internet: apenas para mostrar os anúncios.",
           "Vibração: para dar uma resposta suave ao tocar.",
-          "Manter a tela ligada enquanto você joga (não exige permissões especiais).",
+          "Manter a tela ligada enquanto o app está aberto (não exige permissões especiais).",
+          "Notificações: só se você ativar o lembrete diário. O aviso é programado no seu celular; nada é enviado pela internet.",
         ],
       },
       {
