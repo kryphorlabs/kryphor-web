@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/apps/maru" },
   openGraph: {
     title: "Maru — Juegos para ejercitar la mente",
-    description: "8 juegos suaves, letra grande y 13 idiomas. Un ratito para la mente, cada día.",
+    description: "13 juegos suaves, letra grande y 13 idiomas. Un ratito para la mente, cada día.",
     images: ["/promo/maru-og.png"],
   },
 };

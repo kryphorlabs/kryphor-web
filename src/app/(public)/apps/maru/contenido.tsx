@@ -1,16 +1,17 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Brain, Gem, Sprout, Type, Globe, Smile, Download } from "lucide-react";
+import { Brain, Gem, Sprout, Type, Globe, Smile, Download, Heart } from "lucide-react";
 
 const URL_PLAY_STORE = "https://play.google.com/store/apps/details?id=com.marumente.app";
+const URL_APOYO = "https://www.paypal.com/ncp/payment/2TQ9CQ5XBYJBC";
 const RUBI = "#C8174F";
 const RUBI_OSCURO = "#8E0F37";
 const CREMA = "linear-gradient(160deg, #FFF6EC 0%, #FDEFE6 55%, #F9D5E0 100%)";
 const curva = [0.16, 1, 0.3, 1] as const;
 
 const caracteristicas = [
-  { icono: Brain, titulo: "8 juegos para la mente", texto: "Parejas, sopa de letras, cálculo suave, botellas de colores, triángulos, carritos y más." },
+  { icono: Brain, titulo: "13 juegos para la mente", texto: "Parejas, sopa de letras, cálculo, melodías, diferencias, sombras, rompecabezas, carritos y más." },
   { icono: Sprout, titulo: "Tu ejercicio de cada día", texto: "Tres juegos cortos, unos 10 minutos, y una planta que crece contigo hasta florecer." },
   { icono: Type, titulo: "Letra grande y sin prisa", texto: "Botones amplios, colores claros y nada de relojes que presionen." },
   { icono: Smile, titulo: "Nunca pierdes", texto: "Cada partida termina con una felicitación y la dificultad se ajusta a tu ritmo." },
@@ -184,7 +185,7 @@ export default function ContenidoMaru() {
         </motion.h2>
         <motion.img
           src="/promo/maru-og.png"
-          alt="Maru: juegos suaves para ejercitar la mente cada día. 8 juegos, 13 idiomas, letra grande"
+          alt="Maru: juegos suaves para ejercitar la mente cada día. 13 juegos, 13 idiomas, letra grande"
           width={1024}
           height={500}
           loading="lazy"
@@ -195,6 +196,37 @@ export default function ContenidoMaru() {
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.8, ease: curva }}
         />
+      </section>
+
+      {/* Apoyo voluntario (fuera de la app: dentro de la app se apoya con Google Play) */}
+      <section className="py-20 sm:py-24 text-center px-6">
+        <div className="max-w-2xl mx-auto glass rounded-3xl p-8 sm:p-10">
+          <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-5"
+            style={{ background: "rgba(200,23,79,0.10)", border: "1px solid rgba(200,23,79,0.25)" }}>
+            <Heart size={22} style={{ color: RUBI }} />
+          </div>
+          <h2 className="font-poppins font-bold text-2xl sm:text-3xl mb-3" style={{ color: "var(--fg)" }}>
+            Apoya a Maru
+          </h2>
+          <p className="font-inter leading-relaxed mb-7" style={{ color: "var(--fg-muted)" }}>
+            Maru es gratis y lo seguirá siendo. Si quieres ayudar a que crezca con más juegos e idiomas,
+            puedes hacer un aporte voluntario del monto que tú elijas.
+          </p>
+          <motion.a
+            href={URL_APOYO}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-poppins font-semibold text-white"
+            style={{ background: "#0070BA", boxShadow: "0 8px 28px rgba(0,112,186,0.3)" }}
+          >
+            <Heart size={18} /> Aportar con PayPal
+          </motion.a>
+          <p className="font-inter text-xs mt-5" style={{ color: "var(--fg-muted)" }}>
+            El pago lo procesa PayPal a nombre de Kryphor Labs. Los juegos son iguales con o sin aporte.
+          </p>
+        </div>
       </section>
 
       {/* Cierre */}

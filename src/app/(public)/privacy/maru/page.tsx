@@ -59,7 +59,8 @@ const versiones: Version[] = [
           "Internet: solo para mostrar los anuncios.",
           "Vibración: para dar una respuesta suave al tocar.",
           "Mantener la pantalla encendida mientras la app está abierta (no requiere permisos especiales).",
-          "Notificaciones: solo si activas el recordatorio diario. El aviso se programa en tu celular; no se envía nada por internet.",
+          "Notificaciones: solo si las permites. Se usan para el recordatorio diario (si lo activas) y para un aviso amable si pasan 3 días sin jugar. Se programan en tu celular; no se envía nada por internet.",
+          "Compras de Google Play: solo si eliges hacer un aporte voluntario. El pago lo procesa Google Play; Maru no recibe ni guarda datos de tu tarjeta.",
         ],
       },
       {
@@ -129,7 +130,8 @@ const versiones: Version[] = [
           "Internet: only to show ads.",
           "Vibration: for gentle feedback when you tap.",
           "Keeping the screen on while the app is open (no special permission needed).",
-          "Notifications: only if you turn on the daily reminder. The reminder is scheduled on your phone; nothing is sent over the internet.",
+          "Notifications: only if you allow them. They are used for the daily reminder (if you turn it on) and for a friendly note after 3 days without playing. They are scheduled on your phone; nothing is sent over the internet.",
+          "Google Play purchases: only if you choose to make a voluntary contribution. Payment is handled by Google Play; Maru never receives or stores your card details.",
         ],
       },
       {
@@ -199,7 +201,8 @@ const versiones: Version[] = [
           "Internet: apenas para mostrar os anúncios.",
           "Vibração: para dar uma resposta suave ao tocar.",
           "Manter a tela ligada enquanto o app está aberto (não exige permissões especiais).",
-          "Notificações: só se você ativar o lembrete diário. O aviso é programado no seu celular; nada é enviado pela internet.",
+          "Notificações: só se você permitir. São usadas para o lembrete diário (se você ativar) e para um aviso gentil após 3 dias sem jogar. São programadas no seu celular; nada é enviado pela internet.",
+          "Compras no Google Play: só se você escolher fazer uma contribuição voluntária. O pagamento é processado pelo Google Play; o Maru não recebe nem guarda dados do seu cartão.",
         ],
       },
       {
