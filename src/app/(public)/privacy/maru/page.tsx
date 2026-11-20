@@ -43,6 +43,7 @@ const versiones: Version[] = [
         parrafos: [
           "Toda esta información se queda en tu celular y no se envía a nuestros servidores. Nosotros no la vemos ni la recibimos. La única excepción es el ajedrez en línea, si lo usas (punto 4).",
           "La voz que lee las instrucciones es la del propio celular, y la música viene dentro de la app: ninguna de las dos usa internet ni envía datos.",
+          "Si tienes activada la copia de seguridad de Google en tu celular, Android puede guardar una copia de tu progreso en tu propia cuenta de Google, para recuperarlo si cambias de celular. Esa copia la maneja Android; nosotros no la vemos.",
         ],
       },
       {
@@ -57,7 +58,7 @@ const versiones: Version[] = [
       {
         titulo: "5. Publicidad (Google AdMob)",
         parrafos: [
-          "Maru es gratis y muestra un anuncio pequeño en la parte de abajo, proporcionado por Google AdMob. También puedes ver un video para ganar rubíes, siempre y solo si tú lo eliges.",
+          "Maru es gratis y muestra un anuncio pequeño en la parte de abajo, proporcionado por Google AdMob. También puedes ver un video para ganar rubíes, siempre y solo si tú lo eliges. Si compras \"Maru sin anuncios\", la franja de anuncios desaparece.",
           "Pedimos a Google anuncios no personalizados (no basados en tus intereses). Aun así, para mostrar y medir los anuncios y prevenir fraudes, AdMob puede recopilar datos como el identificador de publicidad del dispositivo, el modelo del celular, el idioma, el país aproximado y cómo interactúas con los anuncios. Ese tratamiento lo hace Google según su propia política: https://policies.google.com/privacy",
           "Puedes restablecer o eliminar tu identificador de publicidad en los ajustes de tu celular (Google → Anuncios).",
         ],
@@ -69,7 +70,7 @@ const versiones: Version[] = [
           "Vibración: para dar una respuesta suave al tocar.",
           "Mantener la pantalla encendida mientras la app está abierta (no requiere permisos especiales).",
           "Notificaciones: solo si las permites. Se usan para el recordatorio diario (si lo activas) y para un aviso amable si pasan 3 días sin jugar. Se programan en tu celular; no se envía nada por internet.",
-          "Compras de Google Play: solo si eliges hacer un aporte voluntario. El pago lo procesa Google Play; Maru no recibe ni guarda datos de tu tarjeta.",
+          "Compras de Google Play: solo si eliges comprar \"Maru sin anuncios\", un paquete de rubíes o hacer un aporte voluntario. Todo es opcional. El pago lo procesa Google Play; Maru no recibe ni guarda datos de tu tarjeta. La app solo guarda en tu celular que la compra ya se entregó, para no entregarla dos veces.",
         ],
       },
       {
@@ -122,6 +123,7 @@ const versiones: Version[] = [
         titulo: "3. Where it is stored",
         parrafos: [
           "All of this stays on your phone and is not sent to our servers. We do not see or receive it. The only exception is online chess, if you use it (section 4).",
+          "If Google backup is turned on on your phone, Android may keep a copy of your progress in your own Google account, so you can recover it if you change phones. Android handles that copy; we never see it.",
           "The voice that reads the instructions is your phone's own voice, and the music is included in the app: neither uses the internet or sends data.",
         ],
       },
@@ -137,7 +139,7 @@ const versiones: Version[] = [
       {
         titulo: "5. Advertising (Google AdMob)",
         parrafos: [
-          "Maru is free and shows a small ad at the bottom, provided by Google AdMob. You can also watch a video to earn rubies, only if you choose to.",
+          "Maru is free and shows a small ad at the bottom, provided by Google AdMob. You can also watch a video to earn rubies, only if you choose to. If you buy \"Maru without ads\", the ad strip goes away.",
           "We request non-personalized ads (not based on your interests). Even so, to show and measure ads and to prevent fraud, AdMob may collect data such as the device advertising ID, phone model, language, approximate country and how you interact with ads. Google processes this data under its own policy: https://policies.google.com/privacy",
           "You can reset or delete your advertising ID in your phone settings (Google → Ads).",
         ],
@@ -149,7 +151,7 @@ const versiones: Version[] = [
           "Vibration: for gentle feedback when you tap.",
           "Keeping the screen on while the app is open (no special permission needed).",
           "Notifications: only if you allow them. They are used for the daily reminder (if you turn it on) and for a friendly note after 3 days without playing. They are scheduled on your phone; nothing is sent over the internet.",
-          "Google Play purchases: only if you choose to make a voluntary contribution. Payment is handled by Google Play; Maru never receives or stores your card details.",
+          "Google Play purchases: only if you choose to buy \"Maru without ads\", a pack of rubies or make a voluntary contribution. Everything is optional. Payment is handled by Google Play; Maru never receives or stores your card details. The app only stores on your phone that the purchase was delivered, so it is never delivered twice.",
         ],
       },
       {
@@ -202,6 +204,7 @@ const versiones: Version[] = [
         titulo: "3. Onde ficam guardados",
         parrafos: [
           "Tudo isso fica no seu celular e não é enviado aos nossos servidores. Nós não vemos nem recebemos essas informações. A única exceção é o xadrez on-line, se você usar (item 4).",
+          "Se o backup do Google estiver ativado no seu celular, o Android pode guardar uma cópia do seu progresso na sua própria conta Google, para você recuperar se trocar de celular. Essa cópia é do Android; nós não a vemos.",
           "A voz que lê as instruções é a do próprio celular, e a música vem dentro do app: nenhuma das duas usa internet nem envia dados.",
         ],
       },
@@ -217,7 +220,7 @@ const versiones: Version[] = [
       {
         titulo: "5. Publicidade (Google AdMob)",
         parrafos: [
-          "Maru é grátis e mostra um anúncio pequeno na parte de baixo, fornecido pelo Google AdMob. Você também pode assistir a um vídeo para ganhar rubis, sempre e só se escolher.",
+          "Maru é grátis e mostra um anúncio pequeno na parte de baixo, fornecido pelo Google AdMob. Você também pode assistir a um vídeo para ganhar rubis, sempre e só se escolher. Se você comprar o \"Maru sem anúncios\", a faixa de anúncios desaparece.",
           "Pedimos ao Google anúncios não personalizados (não baseados nos seus interesses). Mesmo assim, para mostrar e medir os anúncios e prevenir fraudes, o AdMob pode coletar dados como o identificador de publicidade do dispositivo, o modelo do celular, o idioma, o país aproximado e como você interage com os anúncios. O Google trata esses dados conforme sua própria política: https://policies.google.com/privacy",
           "Você pode redefinir ou excluir seu identificador de publicidade nos ajustes do celular (Google → Anúncios).",
         ],
@@ -229,7 +232,7 @@ const versiones: Version[] = [
           "Vibração: para dar uma resposta suave ao tocar.",
           "Manter a tela ligada enquanto o app está aberto (não exige permissões especiais).",
           "Notificações: só se você permitir. São usadas para o lembrete diário (se você ativar) e para um aviso gentil após 3 dias sem jogar. São programadas no seu celular; nada é enviado pela internet.",
-          "Compras no Google Play: só se você escolher fazer uma contribuição voluntária. O pagamento é processado pelo Google Play; o Maru não recebe nem guarda dados do seu cartão.",
+          "Compras no Google Play: só se você escolher comprar o \"Maru sem anúncios\", um pacote de rubis ou fazer uma contribuição voluntária. Tudo é opcional. O pagamento é processado pelo Google Play; o Maru não recebe nem guarda dados do seu cartão. O app só guarda no seu celular que a compra já foi entregue, para não entregá-la duas vezes.",
         ],
       },
       {
