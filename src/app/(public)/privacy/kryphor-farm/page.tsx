@@ -29,8 +29,8 @@ const versiones: Version[] = [
         titulo: "2. Qué datos guardamos",
         parrafos: ["La app guarda únicamente lo que tú escribes en tu cuaderno de finca:"],
         lista: [
-          "Datos de la finca: nombre, cultivos, lotes, moneda, idioma y país del celular.",
-          "Labores, gastos, ventas, pagos y deudas que registras (fechas, valores, notas).",
+          "Datos de la finca: nombre, cultivos, lotes, animales, moneda, idioma y país del celular. Si tienes varias fincas, los de cada una.",
+          "Labores, lo que anotas de tus animales (producción, nacimientos, muertes, vacunas), gastos, ventas, pagos y deudas que registras (fechas, valores, notas).",
           "Nombres de los trabajadores y de las personas o negocios a quienes les compras o vendes, si decides escribirlos.",
           "Un identificador de cuenta anónimo que crea la app automáticamente. Si te registras con Google, también tu nombre, correo y foto de perfil de Google; si te registras con correo, tu correo (la contraseña la guarda Google Firebase cifrada y nosotros no la vemos).",
         ],
@@ -58,7 +58,7 @@ const versiones: Version[] = [
       {
         titulo: "6. Cuánto tiempo los guardamos y cómo borrarlos",
         lista: [
-          "Si usas la app sin iniciar sesión, tu cuenta anónima y sus datos se borran automáticamente a los 30 días. La app te avisa con tiempo para que te registres si quieres conservarlos.",
+          "Si usas la app sin iniciar sesión, tus datos quedan en una cuenta anónima ligada a ese celular. Si borras la app o cambias de celular sin registrarte, ya no podrás entrar a ellos; por eso la app te invita a registrarte gratis. Puedes borrarlos tú mismo desde la app o pedirnos que los borremos.",
           "Si te registras (con Google o con correo), guardamos tus datos mientras tengas la cuenta.",
           "Puedes borrar tu cuenta y todos sus datos en cualquier momento desde la app, en Mi finca → Mi cuenta → Borrar mi cuenta y mis datos. También puedes pedirlo escribiendo a " + CORREO + ".",
           "Puedes borrar cualquier registro desde la app en cualquier momento.",
@@ -97,8 +97,8 @@ const versiones: Version[] = [
       {
         titulo: "2. What we store",
         lista: [
-          "Farm data: name, crops, plots, currency, language and the phone's country.",
-          "The work, expenses, sales, payments and debts you log (dates, amounts, notes).",
+          "Farm data: name, crops, plots, animals, currency, language and the phone's country. If you have several farms, the data of each one.",
+          "The work, what you log about your animals (production, births, deaths, vaccines), expenses, sales, payments and debts you log (dates, amounts, notes).",
           "Names of workers and of the people or businesses you buy from or sell to, if you choose to write them.",
           "An anonymous account ID created automatically by the app. If you sign up with Google, also your Google name, email and profile picture; if you sign up with email, your email address (the password is stored encrypted by Google Firebase and we never see it).",
         ],
@@ -118,7 +118,7 @@ const versiones: Version[] = [
       {
         titulo: "5. Retention and deletion",
         lista: [
-          "If you use the app without signing in, your anonymous account and its data are deleted automatically after 30 days. The app warns you in advance.",
+          "If you use the app without signing in, your data is kept in an anonymous account tied to that phone. If you delete the app or change phones without signing up, you will no longer be able to access it; that is why the app invites you to sign up for free. You can delete it yourself from the app or ask us to delete it.",
           "If you sign up (with Google or email), we keep your data while you have the account.",
           "You can delete your account and all its data at any time from the app, in My farm → My account → Delete my account and data, or by writing to " + CORREO + ".",
           "You can delete any entry from the app at any time.",
@@ -147,8 +147,8 @@ const versiones: Version[] = [
       {
         titulo: "2. Quais dados guardamos",
         lista: [
-          "Dados da fazenda: nome, culturas, talhões, moeda, idioma e país do celular.",
-          "Os trabalhos, gastos, vendas, pagamentos e dívidas que você registra (datas, valores, observações).",
+          "Dados da fazenda: nome, culturas, talhões, animais, moeda, idioma e país do celular. Se você tem várias fazendas, os de cada uma.",
+          "Os trabalhos, o que você anota dos seus animais (produção, nascimentos, mortes, vacinas), gastos, vendas, pagamentos e dívidas que você registra (datas, valores, observações).",
           "Nomes de trabalhadores e de pessoas ou empresas de quem você compra ou para quem vende, se você decidir escrevê-los.",
           "Um identificador de conta anônimo criado automaticamente. Se você se cadastrar com o Google, também seu nome, e-mail e foto do Google; se for com e-mail, seu endereço de e-mail (a senha fica criptografada no Google Firebase e nós não a vemos).",
         ],
@@ -168,7 +168,7 @@ const versiones: Version[] = [
       {
         titulo: "5. Prazo e exclusão",
         lista: [
-          "Se você usa o aplicativo sem entrar com uma conta, a conta anônima e seus dados são apagados automaticamente após 30 dias. O aplicativo avisa antes.",
+          "Se você usa o aplicativo sem entrar com uma conta, seus dados ficam numa conta anônima ligada a esse celular. Se apagar o aplicativo ou trocar de celular sem se cadastrar, não poderá mais acessá-los; por isso o aplicativo convida você a se cadastrar grátis. Você mesmo pode apagá-los pelo aplicativo ou pedir que os apaguemos.",
           "Se você se cadastrar (com o Google ou e-mail), guardamos seus dados enquanto tiver a conta.",
           "Você pode apagar sua conta e todos os dados a qualquer momento pelo aplicativo, em Minha fazenda → Minha conta → Apagar minha conta e meus dados, ou escrevendo para " + CORREO + ".",
           "Você pode apagar qualquer registro pelo aplicativo a qualquer momento.",
