@@ -39,7 +39,7 @@ const versiones: Version[] = [
         titulo: "3. Para qué los usamos",
         parrafos: [
           "Solo para que la app funcione: mostrarte tu cuaderno, calcular tus totales y resúmenes, y guardar una copia segura en la nube para que no pierdas tu información si cambias o pierdes el celular.",
-          "No vendemos ni alquilamos tus datos. No los usamos para publicidad personalizada. No los compartimos con terceros, salvo con Google Firebase, que es el servicio donde se almacenan.",
+          "No vendemos ni alquilamos tus datos. No los usamos para publicidad personalizada. No los compartimos con terceros, salvo con Google Firebase, que es el servicio donde se almacenan. (La publicidad funciona aparte y no recibe estos datos: ver sección 10.)",
         ],
       },
       {
@@ -77,7 +77,16 @@ const versiones: Version[] = [
       {
         titulo: "9. Cambios a esta política",
         parrafos: [
-          "Si cambiamos esta política (por ejemplo, al agregar publicidad en la versión gratuita), lo publicaremos aquí y lo avisaremos en la app antes de que el cambio aplique.",
+          "Si cambiamos esta política, lo publicaremos aquí y lo avisaremos en la app antes de que el cambio aplique.",
+        ],
+      },
+      {
+        titulo: "10. Publicidad",
+        parrafos: [
+          "La versión gratuita muestra un solo anuncio pequeño en la parte de abajo de la pantalla, servido por Google AdMob. Así la app se mantiene gratis. La versión Premium no tiene anuncios.",
+          "Para mostrar y medir los anuncios, Google AdMob puede recibir el identificador de publicidad del celular, la dirección IP y datos generales del aparato (modelo, idioma, sistema). La app pide a Google anuncios no personalizados, es decir, que no se basan en un perfil tuyo.",
+          "Los datos de tu finca (cultivos, animales, cuentas, trabajadores) nunca se comparten con Google AdMob ni con ningún anunciante.",
+          "En Europa y otros lugares donde la ley lo pide, la app te pregunta antes de mostrar anuncios, y puedes cambiar tu decisión en Mi finca → Opciones de privacidad de los anuncios. En cualquier país puedes borrar o reiniciar el identificador de publicidad en los ajustes de Google del celular. Cómo usa Google estos datos: https://policies.google.com/technologies/partner-sites",
         ],
       },
     ],
@@ -106,7 +115,7 @@ const versiones: Version[] = [
       {
         titulo: "3. Why we use it",
         parrafos: [
-          "Only to make the app work: show your notebook, calculate totals and summaries, and keep a secure cloud copy so you don't lose your data if you change or lose your phone. We do not sell or rent your data, use it for personalized advertising, or share it with third parties other than Google Firebase, where it is stored.",
+          "Only to make the app work: show your notebook, calculate totals and summaries, and keep a secure cloud copy so you don't lose your data if you change or lose your phone. We do not sell or rent your data, use it for personalized advertising, or share it with third parties other than Google Firebase, where it is stored. (Advertising works separately and never receives this data: see section 7.)",
         ],
       },
       {
@@ -128,6 +137,15 @@ const versiones: Version[] = [
         titulo: "6. Your rights and contact",
         parrafos: [
           "You can access, update, correct and request deletion of your data by writing to " + CORREO + ". We reply within 15 business days. Kryphor Farm is intended for adults (18+).",
+        ],
+      },
+      {
+        titulo: "7. Advertising",
+        parrafos: [
+          "The free version shows a single small ad at the bottom of the screen, served by Google AdMob, which keeps the app free. The Premium version has no ads.",
+          "To show and measure ads, Google AdMob may receive the phone's advertising ID, IP address and general device data (model, language, system). The app asks Google for non-personalized ads, which are not based on a profile of you.",
+          "Your farm data (crops, animals, accounts, workers) is never shared with Google AdMob or any advertiser.",
+          "In Europe and other places where the law requires it, the app asks you before showing ads, and you can change your choice in My farm → Ad privacy choices. In any country you can delete or reset the advertising ID in your phone's Google settings. How Google uses this data: https://policies.google.com/technologies/partner-sites",
         ],
       },
     ],
@@ -156,7 +174,7 @@ const versiones: Version[] = [
       {
         titulo: "3. Para que usamos",
         parrafos: [
-          "Apenas para o aplicativo funcionar: mostrar seu caderno, calcular totais e resumos e guardar uma cópia segura na nuvem. Não vendemos nem alugamos seus dados, não os usamos para publicidade personalizada e não os compartilhamos com terceiros, exceto o Google Firebase, onde ficam armazenados.",
+          "Apenas para o aplicativo funcionar: mostrar seu caderno, calcular totais e resumos e guardar uma cópia segura na nuvem. Não vendemos nem alugamos seus dados, não os usamos para publicidade personalizada e não os compartilhamos com terceiros, exceto o Google Firebase, onde ficam armazenados. (A publicidade funciona à parte e nunca recebe esses dados: veja a seção 7.)",
         ],
       },
       {
@@ -178,6 +196,15 @@ const versiones: Version[] = [
         titulo: "6. Seus direitos e contato",
         parrafos: [
           "Você pode acessar, atualizar, corrigir e pedir a exclusão dos seus dados escrevendo para " + CORREO + ". Respondemos em até 15 dias úteis. O Kryphor Farm é destinado a maiores de 18 anos.",
+        ],
+      },
+      {
+        titulo: "7. Publicidade",
+        parrafos: [
+          "A versão gratuita mostra um único anúncio pequeno na parte de baixo da tela, servido pelo Google AdMob. Assim o aplicativo continua grátis. A versão Premium não tem anúncios.",
+          "Para mostrar e medir os anúncios, o Google AdMob pode receber o identificador de publicidade do celular, o endereço IP e dados gerais do aparelho (modelo, idioma, sistema). O aplicativo pede ao Google anúncios não personalizados, que não se baseiam em um perfil seu.",
+          "Os dados da sua fazenda (culturas, animais, contas, trabalhadores) nunca são compartilhados com o Google AdMob nem com nenhum anunciante.",
+          "Na Europa e em outros lugares onde a lei exige, o aplicativo pergunta antes de mostrar anúncios, e você pode mudar sua escolha em Minha fazenda → Opções de privacidade dos anúncios. Em qualquer país você pode apagar ou redefinir o identificador de publicidade nas configurações do Google do celular. Como o Google usa esses dados: https://policies.google.com/technologies/partner-sites",
         ],
       },
     ],
